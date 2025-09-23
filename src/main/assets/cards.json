@@ -4,7 +4,9 @@
       "name": "Lumber Yard",
       "type": "RAW_MATERIAL",
       "cost": {},
-      "effect": null,
+      "effect": {
+        "product": [["WOOD"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -12,14 +14,18 @@
       "name": "Ore Vain",
       "type": "RAW_MATERIAL",
       "cost": {},
-      "effect": null,
+      "effect": {
+        "product": [["ORE"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
     {
       "name": "Stone Pit",
       "type": "RAW_MATERIAL",
-      "cost": {},
+      "effect": {
+        "product": [["STONE"]]
+      },
       "effect": null,
       "give_icon": [],
       "require_icon": null
@@ -27,7 +33,9 @@
     {
       "name": "Clay Pool",
       "type": "RAW_MATERIAL",
-      "cost": {},
+      "effect": {
+        "product": [["BRICK"]]
+      },
       "effect": null,
       "give_icon": [],
       "require_icon": null
@@ -39,7 +47,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["WOOD"], ["STONE"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -50,7 +60,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["ORE"], ["BRICK"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -61,7 +73,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["STONE"], ["BRICK"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -72,7 +86,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["WOOD"], ["ORE"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -83,7 +99,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["WOOD"], ["BRICK"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -94,7 +112,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["STONE"], ["ORE"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -105,7 +125,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["WOOD", "WOOD"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -116,7 +138,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["ORE", "ORE"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -127,7 +151,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["STONE", "STONE"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -138,7 +164,9 @@
         "money": 1,
         "resources": []
       },
-      "effect": null,
+      "effect": {
+        "product": [["BRICK", "BRICK"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -146,7 +174,9 @@
       "name": "Glassworks",
       "type": "MANUFACTURED_GOOD",
       "cost": {},
-      "effect": null,
+      "effect": {
+        "product": [["GLASS"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -154,7 +184,9 @@
       "name": "Press",
       "type": "MANUFACTURED_GOOD",
       "cost": {},
-      "effect": null,
+      "effect": {
+        "product": [["PAPYRUS"]]
+      },
       "give_icon": [],
       "require_icon": null
     },
@@ -162,7 +194,9 @@
       "name": "Loom",
       "type": "MANUFACTURED_GOOD",
       "cost": {},
-      "effect": null,
+      "effect": {
+        "product": [["TEXTILES"]]
+      },
       "give_icon": [],
       "require_icon": null
     },

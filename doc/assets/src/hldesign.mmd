@@ -6,9 +6,13 @@ config:
 ---
 classDiagram
     class loader {
-        load_cards(path_to_json: str): list[Card]
+        load_cards(era: int, player_number: int) -> list[Card]
     }
     loader ..> Card
+    loader ..> Card_Type
+    loader ..> Resource
+    loader ..> Effect
+    loader ..> Icon
 
     class Game {
         decks: tuple[Deck]
@@ -19,24 +23,17 @@ classDiagram
     }
     Game ..> Player
     Game ..> Deck
+    Game ..> Pile
 
     class Player {
         hand: list[Card]
         city: City
         \_\_init\_\_(strat: Strategy)
-        execute_turn(list[Opponent])
+        execute_turn(list[Player])
     }
     Player ..> Strategy
-    Player ..> Opponent
     Player ..> City
     Player ..> Card
-
-    class Opponent {
-        city: City
-        \_\_init\_\_(player: Player)
-    }
-    Opponent ..> Player
-    Opponent ..> City
 
     class Strategy {
         %% \_\_init\_\_()
@@ -58,7 +55,7 @@ classDiagram
         name: str
         type: Card_Type
         effect: Effect
-       cost: list[Resource]
+        cost: list[Resource]
         give_icon: list[Icon]
         require_icon: Icon | None
         \_\_init\_\_(name, type, effect, cost, give_icon, require_icon)
@@ -68,14 +65,53 @@ classDiagram
     Card ..> Icon
 
     class Card_Type {
+      RAW_MATERIAL
+      MANUFACTURED_GOOD
+      CIVIC_STRUCTURE
+      COMMERCIAL_STRUCTURE
+      MILITARY_STRUCTURE
+      SCIENTIFIC_STRUCTURE
+      GUILD
     }
     Card_Type ..> Enum
 
     class Icon {
+      HAMMER
+      WATER
+      RELIGION
+      OPERA
+      CAMEL
+      LIGHTHOUSE
+      MARKET
+      BARREL
+      IRON
+      MORTAR
+      LIGHTNING
+      TORCH
+      TARGET
+      LAMP
+      SAW
+      PLANETS
+      SCALES
+      BOOK
+      LIBRARY
+      SCROLL
+      LYRE
+      FEATHER
+      FORT
+      HELMET
     }
     Icon ..> Enum
 
     class Resource {
+      WOOD
+      ORE
+      CLAY
+      BRICK
+      STONE
+      GLASS
+      PAPYRUS
+      TEXTILES
     }
     Resource ..> Enum
 
@@ -84,12 +120,20 @@ classDiagram
         wonder: Wonder
         money: int
         war_points: int
-        base_resource: Resource
-        \_\_init\_\_(name: str, wonder: Wonder)
+        cards: list[Card]
+        productions: list[Production]
+        \_\_init\_\_(name: str, wonder: Wonder, base_resource: Resource)
     }
     City ..> Card
     City ..> Wonder
     City ..> Resource
+    City ..> Production
+
+    class Production {
+        product: list[list[Resource]]
+        \_\_init\_\_(product: list[list[Resource]])
+    }
+    Production ..> Resource
 
     class Wonder {
         current_stage: int
@@ -99,9 +143,10 @@ classDiagram
     Wonder ..> Effect
 
     class Effect {
-        \_\_init\_\_(execute, get_points)
-        execute(game: Game)
-        get_points(game: Game)
+        \_\_init\_\_(on_play, on_game_end)
+        on_play(game: Game, owner: Player)
+        on_game_end(game: Game, owner: Player)
     }
     Effect ..> Game
+    Effect ..> Player
 
