@@ -6,6 +6,10 @@ Simple hobby project [7 wonders board game](https://en.wikipedia.org/wiki/7_Wond
 
 obviously python, uv, nix
 
+## Resources
+
+Card info taken from : https://7-wonders.fandom.com/wiki/List_of_Cards#Overview
+
 ## Design
 
 ![class diagram](./assets/mermaid/hldesign.png)

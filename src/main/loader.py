@@ -6,7 +6,7 @@ from card_type import Type
 from game_resource import Resource
 from effect import Effect
 from icon import Icon
-
+# card info taken from : https://7-wonders.fandom.com/wiki/List_of_Cards#Overview
 CARD_REGISTRY_PATH = "./src/main/assets/cards.json"
 ERA_REGISTRY_PATH = "./src/main/assets/era"
 
