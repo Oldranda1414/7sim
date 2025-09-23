@@ -11,7 +11,6 @@ classDiagram
     loader ..> Card
     loader ..> Card_Type
     loader ..> Resource
-    loader ..> Effect
     loader ..> Icon
 
     class Game {
@@ -53,16 +52,11 @@ classDiagram
 
     class Card {
         name: str
-        type: Card_Type
-        effect: Effect
         cost: list[Resource]
-        give_icon: list[Icon]
-        require_icon: Icon | None
-        \_\_init\_\_(name, type, effect, cost, give_icon, require_icon)
+        require_icon: str | None
+        \_\_init\_\_(name, cost, require_icon)
     }
-    Card ..> Effect
     Card ..> Resource
-    Card ..> Icon
 
     class Card_Type {
       RAW_MATERIAL
@@ -74,34 +68,6 @@ classDiagram
       GUILD
     }
     Card_Type ..> Enum
-
-    class Icon {
-      HAMMER
-      WATER
-      RELIGION
-      OPERA
-      CAMEL
-      LIGHTHOUSE
-      MARKET
-      BARREL
-      IRON
-      MORTAR
-      LIGHTNING
-      TORCH
-      TARGET
-      LAMP
-      SAW
-      PLANETS
-      SCALES
-      BOOK
-      LIBRARY
-      SCROLL
-      LYRE
-      FEATHER
-      FORT
-      HELMET
-    }
-    Icon ..> Enum
 
     class Resource {
       WOOD
@@ -137,16 +103,6 @@ classDiagram
 
     class Wonder {
         current_stage: int
-        stage_effects: list[Effect]
-        \_\_init\_\_(stage_effects: list[Effect])
+        \_\_init\_\_(stage_effects: list[Callables?])
     }
-    Wonder ..> Effect
-
-    class Effect {
-        \_\_init\_\_(on_play, on_game_end)
-        on_play(game: Game, owner: Player)
-        on_game_end(game: Game, owner: Player)
-    }
-    Effect ..> Game
-    Effect ..> Player
 
