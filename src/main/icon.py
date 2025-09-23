@@ -6,7 +6,7 @@ class Icon(str, Enum):
     RELIGION = "religion"
     OPERA = "opera"
     CAMEL = "camel"
-    TOWER = "tower"
+    LIGHTHOUSE = "lighthouse"
     MARKET = "market"
     BARREL = "barrel"
     IRON = "iron"

@@ -171,7 +171,7 @@
       "type": "CIVIC_STRUCTURE",
       "cost": {},
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["RELIGION"],
       "require_icon": null
     },
     {
@@ -179,7 +179,7 @@
       "type": "CIVIC_STRUCTURE",
       "cost": {},
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["OPERA"],
       "require_icon": null
     },
     {
@@ -187,7 +187,7 @@
       "type": "CIVIC_STRUCTURE",
       "cost": {},
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["HAMMER"],
       "require_icon": null
     },
     {
@@ -198,7 +198,7 @@
         "resources": ["STONE"]
       },
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["WATER"],
       "require_icon": null
     },
     {
@@ -210,7 +210,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "SCALES"
     },
     {
       "name": "Temple",
@@ -232,7 +232,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "HAMMER"
     },
     {
       "name": "Acqueduct",
@@ -243,7 +243,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "WATER"
     },
     {
       "name": "Gardens",
@@ -254,7 +254,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "OPERA"
     },
     {
       "name": "Senate",
@@ -265,7 +265,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "LIBRARY"
     },
     {
       "name": "Town Hall",
@@ -287,7 +287,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "RELIGION"
     },
     {
       "name": "Palace",
@@ -313,7 +313,7 @@
       "type": "COMMERCIAL_STRUCTURE",
       "cost": {},
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["MARKET"],
       "require_icon": null
     },
     {
@@ -321,7 +321,7 @@
       "type": "COMMERCIAL_STRUCTURE",
       "cost": {},
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["MARKET"],
       "require_icon": null
     },
     {
@@ -329,7 +329,7 @@
       "type": "COMMERCIAL_STRUCTURE",
       "cost": {},
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["CAMEL"],
       "require_icon": null
     },
     {
@@ -340,8 +340,8 @@
         "resources": ["WOOD", "WOOD"]
       },
       "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      "give_icon": ["LIGHTHOUSE"],
+      "require_icon": "CAMEL"
     },
     {
       "name": "Forum",
@@ -351,8 +351,8 @@
         "resources": ["BRICK", "BRICK"]
       },
       "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      "give_icon": ["BARREL"],
+      "require_icon": "MARKET"
     },
     {
       "name": "Vineyard",
@@ -379,7 +379,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "LIGHTHOUSE"
     },
     {
       "name": "Haven",
@@ -389,7 +389,7 @@
         "resources": ["WOOD", "ORE", "TEXTILES"]
       },
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["BARREL"],
       "require_icon": null
     },
     {
@@ -423,7 +423,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "LIGHTNING"
     },
     {
       "name": "Guard Tower",
@@ -467,7 +467,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "IRON"
     },
     {
       "name": "Archery Range",
@@ -478,7 +478,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "TARGET"
     },
     {
       "name": "Walls",
@@ -488,7 +488,7 @@
         "resources": ["STONE", "STONE", "STONE"]
       },
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["FORT"],
       "require_icon": null
     },
     {
@@ -499,7 +499,7 @@
         "resources": ["ORE", "ORE", "WOOD"]
       },
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["HELMET"],
       "require_icon": null
     },
     {
@@ -522,7 +522,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "SAW"
     },
     {
       "name": "Fortifications",
@@ -533,7 +533,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "FORT"
     },
     {
       "name": "Circus",
@@ -544,7 +544,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "HELMET"
     },
     {
       "name": "Castrum",
@@ -565,7 +565,7 @@
         "resources": ["PAPYRUS"]
       },
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["SCALES", "BOOK"],
       "require_icon": null
     },
     {
@@ -576,7 +576,7 @@
         "resources": ["TEXTILES"]
       },
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["IRON", "MORTAR"],
       "require_icon": null
     },
     {
@@ -587,7 +587,7 @@
         "resources": ["GLASS"]
       },
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["TARGET", "LAMP"],
       "require_icon": null
     },
     {
@@ -598,8 +598,8 @@
         "resources": ["ORE", "ORE", "GLASS"]
       },
       "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      "give_icon": ["LIGHTNING", "TORCH"],
+      "require_icon": "MORTAR"
     },
     {
       "name": "Laboratory",
@@ -609,8 +609,8 @@
         "resources": ["BRICK", "BRICK", "PAPYRUS"]
       },
       "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      "give_icon": ["SAW", "PLANETS"],
+      "require_icon": "LAMP"
     },
     {
       "name": "Library",
@@ -620,8 +620,8 @@
         "resources": ["STONE", "STONE", "TEXTILES"]
       },
       "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      "give_icon": ["LIBRARY", "SCROLL"],
+      "require_icon": "BOOK"
     },
     {
       "name": "School",
@@ -631,7 +631,7 @@
         "resources": ["WOOD", "PAPYRUS"]
       },
       "effect": null,
-      "give_icon": [],
+      "give_icon": ["LYRE", "FEATHER"],
       "require_icon": null
     },
     {
@@ -643,7 +643,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "SCROLL"
     },
     {
       "name": "Study",
@@ -654,7 +654,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "FEATHER"
     },
     {
       "name": "Lodge",
@@ -665,7 +665,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "TORCH"
     },
     {
       "name": "Academy",
@@ -676,7 +676,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "LYRE"
     },
     {
       "name": "Observatory",
@@ -687,7 +687,7 @@
       },
       "effect": null,
       "give_icon": [],
-      "require_icon": null
+      "require_icon": "PLANETS"
     }
   ]
 }
