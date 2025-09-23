@@ -1,9 +1,15 @@
-## Tech stack
-obviously python, uv, nix
-## Design
-```mermaid
+# 7 simulator
 
-```
+Simple hobby project [7 wonders board game](https://en.wikipedia.org/wiki/7_Wonders_(board_game)) simulation and statistics.
+
+## Tech stack
+
+obviously python, uv, nix
+
+## Design
+
+![class diagram](./assets/mermaid/hldesign.png)
+
 ## iterative steps
 
 - statistics:

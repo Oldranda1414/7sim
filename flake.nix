@@ -18,6 +18,10 @@
         uv
         # modern command runner
         just
+        # markdown graphs
+        mermaid-cli
+        # document format converter
+        pandoc
       ];
 
       shellHook = ''

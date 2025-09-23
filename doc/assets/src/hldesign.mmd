@@ -1,0 +1,107 @@
+---
+config:
+  class:
+    hideEmptyMembersBox: true
+  layout: elk
+---
+classDiagram
+    class loader {
+        load_cards(path_to_json: str): list[Card]
+    }
+    loader ..> Card
+
+    class Game {
+        decks: tuple[Deck]
+        players: list[Player]
+        discard_pile: Pile
+        \_\_init\_\_(players: list[Player])
+        run()
+    }
+    Game ..> Player
+    Game ..> Deck
+
+    class Player {
+        hand: list[Card]
+        city: City
+        \_\_init\_\_(strat: Strategy)
+        execute_turn(list[Opponent])
+    }
+    Player ..> Strategy
+    Player ..> Opponent
+    Player ..> City
+    Player ..> Card
+
+    class Opponent {
+        city: City
+        \_\_init\_\_(player: Player)
+    }
+    Opponent ..> Player
+    Opponent ..> City
+
+    class Strategy {
+        %% \_\_init\_\_()
+    }
+
+    class Deck {
+        \_\_init\_\_(cards: list[Card])
+        draw()
+    }
+    Deck ..> Card
+
+    class Pile {
+        \_\_init\_\_()
+        cards: list[Card]
+    }
+    Pile ..> Card
+
+    class Card {
+        name: str
+        type: Card_Type
+        effect: Effect
+        cost: list[Resource]
+        give_icon: list[Icon]
+        require_icon: Icon | None
+        \_\_init\_\_(name, type, effect, cost, give_icon, require_icon)
+    }
+    Card ..> Effect
+    Card ..> Resource
+    Card ..> Icon
+
+    class Card_Type {
+    }
+    Card_Type ..> Enum
+
+    class Icon {
+    }
+    Icon ..> Enum
+
+    class Resource {
+    }
+    Resource ..> Enum
+
+    class City {
+        name: str
+        wonder: Wonder
+        money: int
+        war_points: int
+        base_resource: Resource
+        \_\_init\_\_(name: str, wonder: Wonder)
+    }
+    City ..> Card
+    City ..> Wonder
+    City ..> Resource
+
+    class Wonder {
+        current_stage: int
+        stage_effects: list[Effect]
+        \_\_init\_\_(stage_effects: list[Effect])
+    }
+    Wonder ..> Effect
+
+    class Effect {
+        \_\_init\_\_(execute, get_points)
+        execute(game: Game)
+        get_points(game: Game)
+    }
+    Effect ..> Game
+
