@@ -6,10 +6,7 @@
       "cost": {
         "money": 0,
         "resources": ["ORE", "ORE", "WOOD","STONE", "BRICK"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Craftsmens Guild",
@@ -17,10 +14,7 @@
       "cost": {
         "money": 0,
         "resources": ["STONE", "STONE", "ORE"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Magistrates Guild",
@@ -28,10 +22,7 @@
       "cost": {
         "money": 0,
         "resources": ["WOOD", "WOOD", "WOOD", "STONE", "TEXTILES"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Traders Guild",
@@ -39,10 +30,7 @@
       "cost": {
         "money": 0,
         "resources": ["GLASS", "PAPYRUS", "TEXTILES"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Spies Guild",
@@ -50,10 +38,7 @@
       "cost": {
         "money": 0,
         "resources": ["BRICK", "BRICK", "GLASS"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Philosophers Guild",
@@ -61,10 +46,7 @@
       "cost": {
         "money": 0,
         "resources": ["BRICK", "BRICK", "BRICK", "PAPYRUS", "TEXTILES"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Shipowners Guild",
@@ -72,10 +54,7 @@
       "cost": {
         "money": 0,
         "resources": ["WOOD", "WOOD", "WOOD", "GLASS", "PAPYRUS"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Scientists Guild",
@@ -83,10 +62,7 @@
       "cost": {
         "money": 0,
         "resources": ["WOOD", "WOOD", "ORE", "ORE", "PAPYRUS"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Decorators Guild",
@@ -94,10 +70,7 @@
       "cost": {
         "money": 0,
         "resources": ["ORE", "ORE", "STONE", "TEXTILES"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     },
     {
       "name": "Builders Guild",
@@ -105,10 +78,7 @@
       "cost": {
         "money": 0,
         "resources": ["STONE", "STONE", "STONE", "BRICK", "BRICK", "GLAS"]
-      },
-      "effect": null,
-      "give_icon": [],
-      "require_icon": null
+      }
     }
   ]
 }

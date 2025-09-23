@@ -10,5 +10,9 @@ class City:
         self.productions: list[Production] = []
         self.productions.append(Production([[base_resource]]))
         self.cards: list[Card] = []
-        self.war_points = 0
+        self.mil_strenght = 0
         self.money = 3
+
+    def get_points(self):
+        # TODO implement this to be executed at game end
+        pass

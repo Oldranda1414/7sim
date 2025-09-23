@@ -1,4 +1,4 @@
-from loader import load_cards
+from load.cards import load_cards
 
 def main():
     for era in range(1,4):
