@@ -9,3 +9,9 @@ class Resource(str, Enum):
     GLASS = "glass"
     PAPYRUS = "papyrus"
     TEXTILES = "textiles"
+
+    def __str__(self):
+        return self.value
+
+    def __repr__(self):
+        return str(self)
