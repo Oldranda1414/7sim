@@ -1,0 +1,259 @@
+{
+  "cards": [
+    {
+      "name": "Lumber Yard",
+      "type": "RAW_MATERIAL",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Ore Vain",
+      "type": "RAW_MATERIAL",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Stone Pit",
+      "type": "RAW_MATERIAL",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Clay Pool",
+      "type": "RAW_MATERIAL",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Timber Yard",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Clay Pit",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Excavation",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Forest Cave",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Tree Farm",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Mine",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Glassworks",
+      "type": "MANUFACTURED_GOOD",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Press",
+      "type": "MANUFACTURED_GOOD",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Loom",
+      "type": "MANUFACTURED_GOOD",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Altar",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Theater",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Well",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Baths",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Tavern",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "West Trading Post",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "East Trading Post",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Marketplace",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Guard Tower",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Baracks",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Stockade",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Scriptorium",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["PAPYRUS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Apothecary",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Workshop",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["GLASS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    }
+  ]
+}
