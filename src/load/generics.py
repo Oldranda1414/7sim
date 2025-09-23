@@ -1,5 +1,5 @@
-from cost import Cost
-from game_resource import Resource
+from engine.cost import Cost
+from engine.game_resource import Resource
 
 def load_generics(card_data) -> tuple[str, Cost, str | None]:
     name = card_data["name"]

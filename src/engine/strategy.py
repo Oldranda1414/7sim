@@ -1,7 +1,7 @@
 from typing import Callable
 
-from player import Player
-from card import Card
+from engine.player import Player
+from engine.card import Card
 
 class Strategy:
     def __init__(self, choose_next_card: Callable[[Player], Card]):

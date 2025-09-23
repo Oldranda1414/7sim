@@ -1,4 +1,4 @@
-from game_resource import Resource
+from engine.game_resource import Resource
 
 class Production:
     def __init__(self, product: list[list[Resource]]):

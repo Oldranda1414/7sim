@@ -1,7 +1,7 @@
-from wonder import Wonder
-from card import Card
-from game_resource import Resource
-from production import Production
+from engine.wonder import Wonder
+from engine.card import Card
+from engine.game_resource import Resource
+from engine.production import Production
 
 class City:
     def __init__(self, name: str, wonder: Wonder, base_resource: Resource):

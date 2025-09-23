@@ -1,4 +1,4 @@
-from card import CommercialBuilding
+from engine.card import CommercialBuilding
 from load.generics import load_generics
 
 def load_commercial_building(card_data) -> CommercialBuilding:

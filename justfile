@@ -7,7 +7,7 @@ default:
 # Run the main application
 [no-exit-message]
 run *args:
-    uv --project src run src/main/main.py {{args}}
+    uv --project src run src/main.py {{args}}
 
 # Run uv with correct project path
 [no-exit-message]

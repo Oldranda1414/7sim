@@ -1,4 +1,4 @@
-from card import CivilBuilding
+from engine.card import CivilBuilding
 from load.generics import load_generics
 
 def load_civil_building(card_data) -> CivilBuilding:

@@ -1,6 +1,6 @@
-from production import Production
-from science import Science
-from cost import Cost
+from engine.production import Production
+from engine.science import Science
+from engine.cost import Cost
 
 class Card:
     def __init__(self, name: str, cost: Cost, require_icon: str | None):

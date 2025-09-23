@@ -1,6 +1,6 @@
-from card import ScientificBuilding
+from engine.card import ScientificBuilding
 from load.generics import load_generics
-from science import Science
+from engine.science import Science
 
 def load_scientific_building(card_data) -> ScientificBuilding:
     name, cost, required_icon = load_generics(card_data)  

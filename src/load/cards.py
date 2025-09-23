@@ -1,8 +1,8 @@
 import json
 import copy
 
-from card import Card
-from card_type import Type
+from engine.card import Card
+from engine.card_type import Type
 from load.raw_material import load_raw_material
 from load.manufactory import load_manufactory
 from load.military import load_military_building
@@ -12,8 +12,8 @@ from load.commercial import load_commercial_building
 from load.guild import load_guild
 
 # card info taken from : https://7-wonders.fandom.com/wiki/List_of_Cards#Overview
-CARD_REGISTRY_PATH = "./src/main/assets/cards.json"
-ERA_REGISTRY_PATH = "./src/main/assets/era"
+CARD_REGISTRY_PATH = "./src/load/assets/cards.json"
+ERA_REGISTRY_PATH = "./src/load/assets/era"
 
 def load_cards(era: int, player_number: int) -> list[Card]:
     if not 1 <= era <= 3:

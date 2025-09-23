@@ -1,4 +1,4 @@
-from card import MilitaryBuilding
+from engine.card import MilitaryBuilding
 from load.generics import load_generics
 
 def load_military_building(card_data) -> MilitaryBuilding:

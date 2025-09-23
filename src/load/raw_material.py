@@ -1,12 +1,12 @@
-from card import ManufacturedProduct
+from engine.card import BasicMaterial
 from load.generics import load_generics
-from production import Production
-from game_resource import Resource
+from engine.production import Production
+from engine.game_resource import Resource
 
-def load_manufactory(card_data) -> ManufacturedProduct:
+def load_raw_material(card_data) -> BasicMaterial:
     name, cost, required_icon = load_generics(card_data)  
     production = _load_production(card_data["product"])
-    return ManufacturedProduct(name, cost, required_icon, production)
+    return BasicMaterial(name, cost, required_icon, production)
 
 def _load_production(production_data) -> Production:
     productions: list[list[Resource]] = []

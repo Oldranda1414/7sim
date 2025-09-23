@@ -1,9 +1,9 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from card import Card
-    from city import City
-    from strategy import Strategy
+    from engine.card import Card
+    from engine.city import City
+    from engine.strategy import Strategy
 
 
 class Player:

@@ -1,6 +1,6 @@
 from load.cards import load_cards
-from card import BasicMaterial
-from game_resource import Resource
+from engine.card import BasicMaterial
+from engine.game_resource import Resource
 
 def main():
     # testing around, derping stuff
