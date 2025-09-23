@@ -1,95 +1,111 @@
 {
   "era": [
     {
-      "name": "Sawmill",
+      "name": "Lumber Yard",
       "number": [1, 2, 2, 2, 2] 
     },
     {
-      "name": "Foundry",
+      "name": "Ore Vain",
       "number": [1, 2, 2, 2, 2] 
     },
     {
-      "name": "Quarry",
+      "name": "Stone Pit",
       "number": [1, 1, 2, 2, 2] 
     },
     {
-      "name": "Brickyard",
+      "name": "Clay Pool",
       "number": [1, 1, 2, 2, 2] 
+    },
+    {
+      "name": "Timber Yard",
+      "number": [1, 1, 1, 1, 1] 
+    },
+    {
+      "name": "Clay Pit",
+      "number": [1, 1, 1, 1, 1] 
+    },
+    {
+      "name": "Excavation",
+      "number": [0, 1, 1, 1, 1] 
+    },
+    {
+      "name": "Forest Cave",
+      "number": [0, 0, 1, 1, 1] 
+    },
+    {
+      "name": "Tree Farm",
+      "number": [0, 0, 0, 1, 1] 
+    },
+    {
+      "name": "Mine",
+      "number": [0, 0, 0, 1, 1] 
     },
     {
       "name": "Glassworks",
-      "number": [1, 1, 2, 2, 2] 
+      "number": [1, 1, 1, 2, 2] 
     },
     {
       "name": "Press",
-      "number": [1, 1, 2, 2, 2] 
+      "number": [1, 1, 1, 2, 2] 
     },
     {
       "name": "Loom",
-      "number": [1, 1, 2, 2, 2] 
-    },
-    {
-      "name": "Courthouse",
-      "number": [1, 1, 2, 2, 2] 
-    },
-    {
-      "name": "Temple",
       "number": [1, 1, 1, 2, 2] 
     },
     {
-      "name": "Statue",
-      "number": [1, 1, 1, 1, 2] 
+      "name": "Altar",
+      "number": [1, 1, 2, 2, 2] 
     },
     {
-      "name": "Acqueduct",
-      "number": [1, 1, 1, 1, 2] 
-    },
-    {
-      "name": "Caravansery",
-      "number": [1, 1, 2, 3, 3] 
-    },
-    {
-      "name": "Forum",
-      "number": [1, 1, 1, 2, 3] 
-    },
-    {
-      "name": "Vineyard",
+      "name": "Theater",
       "number": [1, 1, 1, 2, 2] 
     },
     {
-      "name": "Bazaar",
+      "name": "Well",
       "number": [0, 1, 1, 1, 2] 
     },
     {
-      "name": "Stables",
-      "number": [1, 1, 2, 2, 2] 
-    },
-    {
-      "name": "Archery Range",
-      "number": [1, 1, 1, 2, 2] 
-    },
-    {
-      "name": "Walls",
+      "name": "Baths",
       "number": [1, 1, 1, 1, 2] 
     },
     {
-      "name": "Training Ground",
-      "number": [0, 1, 1, 2, 3] 
+      "name": "Tavern",
+      "number": [0, 1, 2, 2, 3] 
     },
     {
-      "name": "Dispensary",
-      "number": [1, 2, 2, 2, 2] 
+      "name": "West Trading Post",
+      "number": [1, 1, 1, 1, 2] 
     },
     {
-      "name": "Laboratory",
-      "number": [1, 1, 2, 2, 2] 
+      "name": "East Trading Post",
+      "number": [1, 1, 1, 1, 2] 
     },
     {
-      "name": "Library",
+      "name": "Marketplace",
       "number": [1, 1, 1, 2, 2] 
     },
     {
-      "name": "School",
+      "name": "Guard Tower",
+      "number": [1, 2, 2, 2, 2] 
+    },
+    {
+      "name": "Baracks",
+      "number": [1, 1, 2, 2, 2] 
+    },
+    {
+      "name": "Stockade",
+      "number": [1, 1, 1, 1, 2] 
+    },
+    {
+      "name": "Scriptorium",
+      "number": [1, 2, 2, 2, 2] 
+    },
+    {
+      "name": "Apothecary",
+      "number": [1, 1, 2, 2, 2] 
+    },
+    {
+      "name": "Workshop",
       "number": [1, 1, 1, 1, 2] 
     }
   ]
