@@ -16,6 +16,12 @@ CARD_REGISTRY_PATH = "./src/main/assets/cards.json"
 ERA_REGISTRY_PATH = "./src/main/assets/era"
 
 def load_cards(era: int, player_number: int) -> list[Card]:
+    if not 1 <= era <= 3:
+        raise ValueError("era value must be in [1,3]")
+    if not 3 <= player_number <= 7:
+        raise ValueError("era value must be in [3,7]")
+
+
     with open(CARD_REGISTRY_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
