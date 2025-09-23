@@ -1,3 +1,14 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+src/build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
 # direnv stuff
 .direnv
 .envrc
@@ -5,3 +16,6 @@
 # generated files
 doc/build/*.pdf
 doc/assets/mermaid/*.png
+
+# python cache files
+src/**/.null*.py

@@ -99,6 +99,50 @@
       "require_icon": null
     },
     {
+      "name": "Sawmill",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Foundry",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Quarry",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Brickyard",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
       "name": "Glassworks",
       "type": "MANUFACTURED_GOOD",
       "cost": {},
@@ -158,6 +202,105 @@
       "require_icon": null
     },
     {
+      "name": "Courthouse",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Temple",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "BRICK", "GLASS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Statue",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "WOOD"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Acqueduct",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Gardens",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "WOOD"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Senate",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "STONE", "ORE"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Town Hall",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE", "GLASS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Pantheon",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "ORE", "GLASS", "PAPYRUS", "TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Palace",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "STONE", "ORE", "BRICK", "GLASS", "PAPYRUS", "TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
       "name": "Tavern",
       "type": "COMMERCIAL_STRUCTURE",
       "cost": {},
@@ -185,6 +328,99 @@
       "name": "Marketplace",
       "type": "COMMERCIAL_STRUCTURE",
       "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Caravansery",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Forum",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Vineyard",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Bazaar",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Lighthouse",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "GLASS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Haven",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "ORE", "TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Chamber of Commerce",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "PAPYRUS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Ludus",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "ORE"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Arena",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "ORE"]
+      },
       "effect": null,
       "give_icon": [],
       "require_icon": null
@@ -223,6 +459,105 @@
       "require_icon": null
     },
     {
+      "name": "Stables",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "ORE", "BRICK"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Archery Range",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "ORE"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Walls",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Training Ground",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "WOOD"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Arsenal",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "ORE", "TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Siege Workshop",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "BRICK", "WOOD"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Fortifications",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "ORE", "BRICK"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Circus",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "BRICK", "ORE"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Castrum",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "WOOD", "PAPYRUS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
       "name": "Scriptorium",
       "type": "SCIENTIFIC_STRUCTURE",
       "cost": {
@@ -250,6 +585,105 @@
       "cost": {
         "money": 0,
         "resources": ["GLASS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Dispensary",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "GLASS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Laboratory",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "PAPYRUS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Library",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "School",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "PAPYRUS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "University",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "GLASS", "PAPYRUS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Study",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "PAPYRUS", "TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Lodge",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "PAPYRUS", "TEXTILES"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Academy",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE", "GLASS"]
+      },
+      "effect": null,
+      "give_icon": [],
+      "require_icon": null
+    },
+    {
+      "name": "Observatory",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "GLASS", "TEXTILES"]
       },
       "effect": null,
       "give_icon": [],
