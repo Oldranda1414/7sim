@@ -84,74 +84,74 @@ The results are summarized in the following graphs:
 ### Resource Distribution Summary
 
 3 players:
-  Base Resources:
-    WOOD: 4 (25.0%)
-    ORE: 4 (25.0%)
-    BRICK: 4 (25.0%)
-    STONE: 4 (25.0%)
-  Rare Resources:
-    GLASS: 2 (33.3%)
-    PAPYRUS: 2 (33.3%)
-    TEXTILES: 2 (33.3%)
-  Totals: Base=16, Rare=6
-  Per Player: Base=5.33, Rare=2.00
-  Base:Rare Ratio: 2.67:1
+- Base Resources:
+  - WOOD: 4 (25.0%)
+  - ORE: 4 (25.0%)
+  - BRICK: 4 (25.0%)
+  - STONE: 4 (25.0%)
+- Rare Resources:
+  - GLASS: 2 (33.3%)
+  - PAPYRUS: 2 (33.3%)
+  - TEXTILES: 2 (33.3%)
+- Totals: Base=16, Rare=6
+- Per Player: Base=5.33, Rare=2.00
+- Base:Rare Ratio: 2.67:1
 
 4 players:
-  Base Resources:
-    WOOD: 7 (29.2%)
-    ORE: 7 (29.2%)
-    BRICK: 5 (20.8%)
-    STONE: 5 (20.8%)
-  Rare Resources:
-    GLASS: 2 (33.3%)
-    PAPYRUS: 2 (33.3%)
-    TEXTILES: 2 (33.3%)
-  Totals: Base=24, Rare=6
-  Per Player: Base=6.00, Rare=1.50
-  Base:Rare Ratio: 4.00:1
+- Base Resources:
+  - WOOD: 7 (29.2%)
+  - ORE: 7 (29.2%)
+  - BRICK: 5 (20.8%)
+  - STONE: 5 (20.8%)
+- Rare Resources:
+  - GLASS: 2 (33.3%)
+  - PAPYRUS: 2 (33.3%)
+  - TEXTILES: 2 (33.3%)
+- Totals: Base=24, Rare=6
+- Per Player: Base=6.00, Rare=1.50
+- Base:Rare Ratio: 4.00:1
 
 5 players:
-  Base Resources:
-    WOOD: 8 (25.0%)
-    ORE: 8 (25.0%)
-    BRICK: 8 (25.0%)
-    STONE: 8 (25.0%)
-  Rare Resources:
-    GLASS: 3 (33.3%)
-    PAPYRUS: 3 (33.3%)
-    TEXTILES: 3 (33.3%)
-  Totals: Base=32, Rare=9
-  Per Player: Base=6.40, Rare=1.80
-  Base:Rare Ratio: 3.56:1
+- Base Resources:
+  - WOOD: 8 (25.0%)
+  - ORE: 8 (25.0%)
+  - BRICK: 8 (25.0%)
+  - STONE: 8 (25.0%)
+- Rare Resources:
+  - GLASS: 3 (33.3%)
+  - PAPYRUS: 3 (33.3%)
+  - TEXTILES: 3 (33.3%)
+- Totals: Base=32, Rare=9
+- Per Player: Base=6.40, Rare=1.80
+- Base:Rare Ratio: 3.56:1
 
 6 players:
-  Base Resources:
-    WOOD: 9 (25.0%)
-    ORE: 9 (25.0%)
-    BRICK: 9 (25.0%)
-    STONE: 9 (25.0%)
-  Rare Resources:
-    GLASS: 4 (33.3%)
-    PAPYRUS: 4 (33.3%)
-    TEXTILES: 4 (33.3%)
-  Totals: Base=36, Rare=12
-  Per Player: Base=6.00, Rare=2.00
-  Base:Rare Ratio: 3.00:1
+- Base Resources:
+  - WOOD: 9 (25.0%)
+  - ORE: 9 (25.0%)
+  - BRICK: 9 (25.0%)
+  - STONE: 9 (25.0%)
+- Rare Resources:
+  - GLASS: 4 (33.3%)
+  - PAPYRUS: 4 (33.3%)
+  - TEXTILES: 4 (33.3%)
+- Totals: Base=36, Rare=12
+- Per Player: Base=6.00, Rare=2.00
+- Base:Rare Ratio: 3.00:1
 
 7 players:
-  Base Resources:
-    WOOD: 9 (25.0%)
-    ORE: 9 (25.0%)
-    BRICK: 9 (25.0%)
-    STONE: 9 (25.0%)
-  Rare Resources:
-    GLASS: 4 (33.3%)
-    PAPYRUS: 4 (33.3%)
-    TEXTILES: 4 (33.3%)
-  Totals: Base=36, Rare=12
-  Per Player: Base=5.14, Rare=1.71
-  Base:Rare Ratio: 3.00:1
+- Base Resources:
+  - WOOD: 9 (25.0%)
+  - ORE: 9 (25.0%)
+  - BRICK: 9 (25.0%)
+  - STONE: 9 (25.0%)
+- Rare Resources:
+  - GLASS: 4 (33.3%)
+  - PAPYRUS: 4 (33.3%)
+  - TEXTILES: 4 (33.3%)
+- Totals: Base=36, Rare=12
+- Per Player: Base=5.14, Rare=1.71
+- Base:Rare Ratio: 3.00:1
 
 ## Card type distribution
 
