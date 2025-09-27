@@ -77,7 +77,7 @@
       "type": "GUILD",
       "cost": {
         "money": 0,
-        "resources": ["STONE", "STONE", "STONE", "BRICK", "BRICK", "GLAS"]
+        "resources": ["STONE", "STONE", "STONE", "BRICK", "BRICK", "GLASS"]
       }
     }
   ]

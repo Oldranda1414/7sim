@@ -13,6 +13,7 @@ from load.guild import load_guild
 
 # card info taken from : https://7-wonders.fandom.com/wiki/List_of_Cards#Overview
 CARD_REGISTRY_PATH = "./src/load/assets/cards.json"
+GUILD_CARD_REGISTRY_PATH = "./src/load/assets/guild_cards.json"
 ERA_REGISTRY_PATH = "./src/load/assets/era"
 
 def load_all_cards(player_number: int) -> list[Card]:
@@ -27,7 +28,6 @@ def load_cards(player_number: int, era: int) -> list[Card]:
     if not 3 <= player_number <= 7:
         raise ValueError("era value must be in [3,7]")
 
-
     with open(CARD_REGISTRY_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -36,7 +36,7 @@ def load_cards(player_number: int, era: int) -> list[Card]:
         card = _load_card(card)
         card_registry[card.name] = card
 
-    with open(_get_era_resitry_path(era), "r", encoding="utf-8") as f:
+    with open(_get_era_registry_path(era), "r", encoding="utf-8") as f:
         data = json.load(f)
     
     cards: list[Card] = []
@@ -47,7 +47,17 @@ def load_cards(player_number: int, era: int) -> list[Card]:
             cards.append(copy.deepcopy(card_registry[name]))
     return cards
 
-def _get_era_resitry_path(era_number: int) -> str:
+def load_guild_cards() -> list[Card]:
+    with open(GUILD_CARD_REGISTRY_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    guild_cards: list[Card] = []
+    for card in data["cards"]:
+        card = _load_card(card)
+        guild_cards.append(card)
+    return guild_cards
+
+def _get_era_registry_path(era_number: int) -> str:
     return f"{ERA_REGISTRY_PATH}/{era_number}.json"
 
 def _load_card(card_data) -> Card:

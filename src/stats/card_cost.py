@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from load.cards import load_cards
+from load.cards import load_cards, load_guild_cards
 from engine.card import Cost
 from engine.game_resource import resource_type, ResourceType
 
@@ -31,6 +31,8 @@ def collect_cost_data():
         
         for era in eras:
             cards = load_cards(player_number, era)
+            if era == 3:
+                cards += load_guild_cards()
             total_cost = 0
             for card in cards:
                 cost_value = _get_rp(card.cost)
@@ -56,12 +58,18 @@ def collect_cost_data():
             overall_avg_data.append(0)
             total_cards_per_player.append(0)
     
+    # Calculate era averages across all player counts
+    era_averages = {}
+    for era in eras:
+        era_averages[era] = np.mean(era_data[era])
+    
     return {
         'player_counts': player_counts,
         'eras': eras,
         'era_data': era_data,
         'overall_avg_data': overall_avg_data,
-        'total_cards_per_player': total_cards_per_player
+        'total_cards_per_player': total_cards_per_player,
+        'era_averages': era_averages
     }
 
 def create_era_comparison_chart(data):
@@ -100,12 +108,6 @@ def create_era_comparison_chart(data):
     add_value_labels(bars1)
     add_value_labels(bars2)
     add_value_labels(bars3)
-    
-    # Add some analysis text
-    max_cost = max(max(era_data[1]), max(era_data[2]), max(era_data[3]))
-    ax.text(0.02, 0.98, f'Era Progression: Cost increases across eras',
-            transform=ax.transAxes, fontsize=10, verticalalignment='top',
-            bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
     
     plt.tight_layout()
     return fig
@@ -150,15 +152,59 @@ def create_overall_average_chart(data):
     plt.tight_layout()
     return fig
 
+def create_era_average_chart(data):
+    """Create bar chart showing average cost per era (averaged across all player counts)"""
+    fig, ax = plt.subplots(figsize=(10, 6))
+    
+    eras = data['eras']
+    era_averages = data['era_averages']
+    
+    # Create bars
+    colors = ['lightblue', 'lightcoral', 'lightgreen']
+    bars = ax.bar(eras, [era_averages[era] for era in eras], color=colors, alpha=0.8, width=0.6)
+    
+    # Customize the chart
+    ax.set_xlabel('Era', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Average Resource Points per Card', fontsize=12, fontweight='bold')
+    ax.set_title('Average Card Cost by Era\n(Averaged Across All Player Counts)', 
+                 fontsize=14, fontweight='bold')
+    ax.set_xticks(eras)
+    ax.set_xticklabels([f'Era {era}' for era in eras])
+    ax.grid(True, alpha=0.3, axis='y')
+    
+    # Add value labels on bars
+    for bar, era in zip(bars, eras):
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2., height + 0.05,
+               f'{height:.2f} RP', ha='center', va='bottom', fontweight='bold', fontsize=11)
+    
+    # Add percentage increase annotations
+    for i in range(1, len(eras)):
+        prev_avg = era_averages[eras[i-1]]
+        curr_avg = era_averages[eras[i]]
+        increase_pct = ((curr_avg - prev_avg) / prev_avg) * 100
+        ax.annotate(f'+{increase_pct:.1f}%', 
+                   xy=(eras[i], curr_avg), 
+                   xytext=(eras[i], curr_avg + 0.1),
+                   ha='center', va='bottom', fontsize=10, fontweight='bold',
+                   arrowprops=dict(arrowstyle='->', color='red', lw=1.5))
+    
+    plt.tight_layout()
+    return fig
+
 def create_combined_analysis_plot(data):
     """Create a comprehensive analysis plot with multiple subplots"""
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
+    fig, axes = plt.subplots(2, 3, figsize=(18, 12))
     fig.suptitle('Comprehensive Card Cost Analysis', fontsize=16, fontweight='bold')
+    
+    # Flatten the axes array for easier indexing
+    ax1, ax2, ax3, ax4, ax5, ax6 = axes.flatten()
     
     player_counts = data['player_counts']
     eras = data['eras']
     era_data = data['era_data']
     overall_avg = data['overall_avg_data']
+    era_averages = data['era_averages']
     
     # Subplot 1: Era comparison (similar to first chart)
     x = np.arange(len(player_counts))
@@ -187,7 +233,8 @@ def create_combined_analysis_plot(data):
     # Add trend line to overall average
     z = np.polyfit(player_counts, overall_avg, 1)
     p = np.poly1d(z)
-    ax2.plot(player_counts, p(player_counts), "r--", alpha=0.8)
+    ax2.plot(player_counts, p(player_counts), "r--", alpha=0.8, label='Trend')
+    ax2.legend()
     
     # Subplot 3: Cost progression across eras (line chart)
     for era in eras:
@@ -220,6 +267,47 @@ def create_combined_analysis_plot(data):
     ax4.legend()
     ax4.grid(True, alpha=0.3)
     
+    # Subplot 5: Average cost per era (NEW - averaged across player counts)
+    colors = ['lightblue', 'lightcoral', 'lightgreen']
+    bars = ax5.bar(eras, [era_averages[era] for era in eras], color=colors, alpha=0.8)
+    ax5.set_xlabel('Era')
+    ax5.set_ylabel('Average Cost (RP)')
+    ax5.set_title('Average Cost by Era\n(All Player Counts)')
+    ax5.set_xticks(eras)
+    ax5.set_xticklabels([f'Era {era}' for era in eras])
+    ax5.grid(True, alpha=0.3)
+    
+    # Add value labels on bars
+    for bar, era in zip(bars, eras):
+        height = bar.get_height()
+        ax5.text(bar.get_x() + bar.get_width()/2., height + 0.05,
+                f'{height:.2f} RP', ha='center', va='bottom', fontweight='bold')
+    
+    # Subplot 6: Percentage increase between eras
+    increases = []
+    for i in range(1, len(eras)):
+        prev_avg = era_averages[eras[i-1]]
+        curr_avg = era_averages[eras[i]]
+        increase_pct = ((curr_avg - prev_avg) / prev_avg) * 100
+        increases.append(increase_pct)
+    
+    ax6.bar([1, 2], increases, color=['orange', 'purple'], alpha=0.7)
+    ax6.set_xlabel('Era Transition')
+    ax6.set_ylabel('Percentage Increase (%)')
+    ax6.set_title('Cost Increase Percentage Between Eras')
+    ax6.set_xticks([1, 2])
+    ax6.set_xticklabels(['Era 1→2', 'Era 2→3'])
+    ax6.grid(True, alpha=0.3)
+    
+    # Add value labels on percentage bars
+    for i, increase in enumerate(increases):
+        ax6.text(i+1, increase + 1, f'+{increase:.1f}%', 
+                ha='center', va='bottom', fontweight='bold')
+    
+    # Hide the sixth subplot if we don't have data for it
+    if len(increases) == 0:
+        ax6.set_visible(False)
+    
     plt.tight_layout()
     return fig
 
@@ -230,7 +318,8 @@ def main():
     # Create individual charts
     fig1 = create_era_comparison_chart(data)
     fig2 = create_overall_average_chart(data)
-    fig3 = create_combined_analysis_plot(data)
+    fig3 = create_era_average_chart(data)  # New chart
+    fig4 = create_combined_analysis_plot(data)
     
     # Display the plots
     # plt.show()
@@ -239,7 +328,8 @@ def main():
     save_dir = "src/stats/assets/card_cost/"
     fig1.savefig(save_dir + 'era_cost_comparison.png', dpi=300, bbox_inches='tight')
     fig2.savefig(save_dir + 'overall_cost_average.png', dpi=300, bbox_inches='tight')
-    fig3.savefig(save_dir + 'comprehensive_cost_analysis.png', dpi=300, bbox_inches='tight')
+    fig3.savefig(save_dir + 'era_average_cost.png', dpi=300, bbox_inches='tight')
+    fig4.savefig(save_dir + 'comprehensive_cost_analysis.png', dpi=300, bbox_inches='tight')
     
     # Print summary statistics
     print("\n=== Card Cost Analysis Summary ===")
@@ -250,6 +340,17 @@ def main():
         print(f"  Era 3 average cost: {data['era_data'][3][i]:.2f} RP")
         print(f"  Overall average cost: {data['overall_avg_data'][i]:.2f} RP")
         print(f"  Total cards: {data['total_cards_per_player'][i]}")
+    
+    print("\n=== Era Averages (Across All Player Counts) ===")
+    for era in data['eras']:
+        print(f"  Era {era}: {data['era_averages'][era]:.2f} RP")
+    
+    # Calculate percentage increases between eras
+    for i in range(1, len(data['eras'])):
+        prev_era = data['eras'][i-1]
+        curr_era = data['eras'][i]
+        increase = ((data['era_averages'][curr_era] - data['era_averages'][prev_era]) / data['era_averages'][prev_era]) * 100
+        print(f"  Era {prev_era} → Era {curr_era}: +{increase:.1f}% increase")
 
 if __name__ == "__main__":
     main()
