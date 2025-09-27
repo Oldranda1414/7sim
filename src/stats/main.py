@@ -1,6 +1,7 @@
 from stats.card_cost import main as card_cost
 from stats.res_avail import main as res_avail
 from stats.res_balance import main as res_balance
+from stats.card_balance import main as card_balance
 
 def main():
     # testing around, derping stuff
@@ -12,8 +13,8 @@ def main():
     # print(f"{count_resource} resource cards in first era with 3 players")
     res_avail()
     res_balance()
+    card_balance()
     card_cost()
-
 
 if __name__ == "__main__":
     main()
