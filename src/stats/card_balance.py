@@ -330,8 +330,19 @@ def create_average_card_distribution_chart(data):
     
     fig, ax = plt.subplots(figsize=(12, 8))
     
-    # Create bars with different colors
-    colors = plt.cm.Set3(np.linspace(0, 1, len(types_sorted)))
+    # Define color mapping based on card type
+    color_map = {
+        Type.RAW_MATERIAL: '#8B4513',        # Brown
+        Type.MANUFACTURED_GOOD: '#808080',   # Grey
+        Type.CIVIC_STRUCTURE: '#1E90FF',     # Blue
+        Type.COMMERCIAL_STRUCTURE: '#FFD700', # Yellow
+        Type.MILITARY_STRUCTURE: '#DC143C',  # Red
+        Type.SCIENTIFIC_STRUCTURE: '#2E8B57', # Green
+        Type.GUILD: '#9370DB'                # Purple (for Guild, since you didn't specify)
+    }
+    
+    # Create bars with specific colors for each card type
+    colors = [color_map[card_type] for card_type in types_sorted]
     bars = ax.bar(range(len(types_sorted)), averages_sorted, color=colors, alpha=0.8)
     
     # Customize the chart
@@ -349,6 +360,12 @@ def create_average_card_distribution_chart(data):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2., height + 0.01,
                 f'{value:.2f}', ha='center', va='bottom', fontweight='bold')
+    
+    # Add some statistics
+    total_avg = sum(averages_sorted)
+    ax.text(0.02, 0.98, f'Total average cards per player: {total_avg:.2f}',
+            transform=ax.transAxes, fontsize=12, verticalalignment='top',
+            bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
     
     plt.tight_layout()
     return fig
