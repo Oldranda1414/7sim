@@ -21,7 +21,7 @@ The following graphs summarise the results:
 ![resource analisys](./../src/stats/assets/res_avail/resource_analysis_comprehensive.png)
 ![resource trend](./../src/stats/assets/res_avail/resource_trend_analysis.png)
 
-This means that the avarage ratio of basa resources to rare resources in a game is:
+This means that the avarage ratio of base resources to rare resources in a game is:
 
 (2.33 + 3.50 + 3.11 + 2.50 + 2.50) / 5 = 13.94 / 5 = 2.79
 
