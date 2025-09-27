@@ -79,6 +79,7 @@ This was explored in `res_balance.py`
 The results are summarized in the following graphs:
 
 ![resource balance](./../src/stats/assets/res_balance/comprehensive_resource_grouped.png)
+![resource comparison](./../src/stats/assets/res_balance/resource_comparison.png)
 
 ### Resource Distribution Summary
 
