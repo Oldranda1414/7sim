@@ -24,39 +24,44 @@ The following graphs summarise the results:
 ### Resource Availability Summary
 
 3 players:
-  Total Base Resources: 14
-  Total Rare Resources: 6
-  Base/Player: 4.67
-  Rare/Player: 2.00
-  Base:Rare Ratio: 2.33:1
+
+- Total Base Resources: 14
+- Total Rare Resources: 6
+- Base/Player: 4.67
+- Rare/Player: 2.00
+- Base:Rare Ratio: 2.33:1
 
 4 players:
-  Total Base Resources: 21
-  Total Rare Resources: 6
-  Base/Player: 5.25
-  Rare/Player: 1.50
-  Base:Rare Ratio: 3.50:1
+
+- Total Base Resources: 21
+- Total Rare Resources: 6
+- Base/Player: 5.25
+- Rare/Player: 1.50
+- Base:Rare Ratio: 3.50:1
 
 5 players:
-  Total Base Resources: 28
-  Total Rare Resources: 9
-  Base/Player: 5.60
-  Rare/Player: 1.80
-  Base:Rare Ratio: 3.11:1
+
+- Total Base Resources: 28
+- Total Rare Resources: 9
+- Base/Player: 5.60
+- Rare/Player: 1.80
+- Base:Rare Ratio: 3.11:1
 
 6 players:
-  Total Base Resources: 30
-  Total Rare Resources: 12
-  Base/Player: 5.00
-  Rare/Player: 2.00
-  Base:Rare Ratio: 2.50:1
+
+- Total Base Resources: 30
+- Total Rare Resources: 12
+- Base/Player: 5.00
+- Rare/Player: 2.00
+- Base:Rare Ratio: 2.50:1
 
 7 players:
-  Total Base Resources: 30
-  Total Rare Resources: 12
-  Base/Player: 4.29
-  Rare/Player: 1.71
-  Base:Rare Ratio: 2.50:1
+
+- Total Base Resources: 30
+- Total Rare Resources: 12
+- Base/Player: 4.29
+- Rare/Player: 1.71
+- Base:Rare Ratio: 2.50:1
 
 
 This means that the avarage ratio of base resources to rare resources in a game is:
@@ -94,44 +99,50 @@ This was explored in `card_cost.py`
 ### Card Cost Analysis Summary
 
 3 players:
-  Era 1 average cost: 0.71 RP
-  Era 2 average cost: 2.48 RP
-  Era 3 average cost: 6.50 RP
-  Overall average cost: 3.47 RP
-  Total cards: 68
+
+- Era 1 average cost: 0.71 RP
+- Era 2 average cost: 2.48 RP
+- Era 3 average cost: 6.50 RP
+- Overall average cost: 3.47 RP
+- Total cards: 68
 
 4 players:
-  Era 1 average cost: 0.71 RP
-  Era 2 average cost: 2.38 RP
-  Era 3 average cost: 6.25 RP
-  Overall average cost: 3.28 RP
-  Total cards: 86
+
+- Era 1 average cost: 0.71 RP
+- Era 2 average cost: 2.38 RP
+- Era 3 average cost: 6.25 RP
+- Overall average cost: 3.28 RP
+- Total cards: 86
 
 5 players:
-  Era 1 average cost: 0.71 RP
-  Era 2 average cost: 2.33 RP
-  Era 3 average cost: 5.95 RP
-  Overall average cost: 3.07 RP
-  Total cards: 109
+
+- Era 1 average cost: 0.71 RP
+- Era 2 average cost: 2.33 RP
+- Era 3 average cost: 5.95 RP
+- Overall average cost: 3.07 RP
+- Total cards: 109
 
 6 players:
-  Era 1 average cost: 0.64 RP
-  Era 2 average cost: 2.36 RP
-  Era 3 average cost: 6.02 RP
-  Overall average cost: 3.05 RP
-  Total cards: 128
+
+- Era 1 average cost: 0.64 RP
+- Era 2 average cost: 2.36 RP
+- Era 3 average cost: 6.02 RP
+- Overall average cost: 3.05 RP
+- Total cards: 128
 
 7 players:
-  Era 1 average cost: 0.65 RP
-  Era 2 average cost: 2.39 RP
-  Era 3 average cost: 6.08 RP
-  Overall average cost: 3.06 RP
-  Total cards: 148
+
+- Era 1 average cost: 0.65 RP
+- Era 2 average cost: 2.39 RP
+- Era 3 average cost: 6.08 RP
+- Overall average cost: 3.06 RP
+- Total cards: 148
 
 ### Era Averages (Across All Player Counts)
 
-  Era 1: 0.69 RP
-  Era 2: 2.39 RP
-  Era 3: 6.16 RP
-  Era 1 → Era 2: +247.2% increase
-  Era 2 → Era 3: +158.0% increase
+- Era 1: 0.69 RP
+- Era 2: 2.39 RP
+- Era 3: 6.16 RP
+- Era 1 → Era 2: +247.2% increase
+- Era 2 → Era 3: +158.0% increase
+
