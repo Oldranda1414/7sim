@@ -15,3 +15,19 @@ class Resource(str, Enum):
 
     def __repr__(self):
         return str(self)
+
+class ResourceType(str, Enum):
+    BASE = "base"
+    RARE = "rare"
+
+    def __str__(self):
+        return self.value
+
+    def __repr__(self):
+        return str(self)
+
+def resource_type(resource: Resource) -> ResourceType:
+    rare_resources = [Resource.GLASS, Resource.PAPYRUS, Resource.TEXTILES]
+    if resource in rare_resources:
+        return ResourceType.RARE
+    return ResourceType.BASE

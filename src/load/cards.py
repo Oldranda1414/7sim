@@ -15,7 +15,13 @@ from load.guild import load_guild
 CARD_REGISTRY_PATH = "./src/load/assets/cards.json"
 ERA_REGISTRY_PATH = "./src/load/assets/era"
 
-def load_cards(era: int, player_number: int) -> list[Card]:
+def load_all_cards(player_number: int) -> list[Card]:
+    cards: list[Card] = []
+    for era in range(1,4):
+        cards += load_cards(player_number, era)
+    return cards
+
+def load_cards(player_number: int, era: int) -> list[Card]:
     if not 1 <= era <= 3:
         raise ValueError("era value must be in [1,3]")
     if not 3 <= player_number <= 7:
