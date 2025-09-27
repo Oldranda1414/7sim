@@ -27,6 +27,9 @@ This means that the avarage ratio of basa resources to rare resources in a game 
 
 This provides a proof to justify the Resource Point system discussed later.
 
+## Resource balance
+
+Are all resources equally available per game per number of players?
 
 ## Card cost
 
@@ -43,3 +46,10 @@ A good RP system would be to assign:
 - 3 RP per rare resource needed
 
 The value ration between base resource and rare resource is justified by the avarage resource availability ratio between base and rare resource is 2.79, as proven in the [Resource availablility](#resource-availability) chapter.
+
+The value given for money is totally instinctive. An evaluation could be made based on the money obtained through cards and wonders, but this is not enough for a true justification, as trade between neighboring cities is hard to take account for without actual game data.
+
+This was explored in `card_cost.py`
+
+![card cost](./../src/stats/assets/card_cost/comprehensive_cost_analysis.png)
+
