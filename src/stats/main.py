@@ -1,5 +1,6 @@
 from stats.card_cost import main as card_cost
 from stats.res_avail import main as res_avail
+from stats.res_balance import main as res_balance
 
 def main():
     # testing around, derping stuff
@@ -10,6 +11,7 @@ def main():
     # count_resource = sum(1 for card in first_era_cards if isinstance(card, BasicMaterial) and Resource.WOOD in card.production.product[0])
     # print(f"{count_resource} resource cards in first era with 3 players")
     res_avail()
+    res_balance()
     card_cost()
 
 
