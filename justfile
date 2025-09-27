@@ -9,6 +9,11 @@ default:
 run *args:
     uv --project src run src/main.py {{args}}
 
+# Generate the stats graphs
+[no-exit-message]
+stats *args:
+    uv --project src run src/stats_main.py {{args}}
+
 # Run uv with correct project path
 [no-exit-message]
 uv *args:

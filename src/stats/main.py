@@ -9,8 +9,8 @@ def main():
     #         print(card.production.product)
     # count_resource = sum(1 for card in first_era_cards if isinstance(card, BasicMaterial) and Resource.WOOD in card.production.product[0])
     # print(f"{count_resource} resource cards in first era with 3 players")
-    res_avail()
-    # card_cost()
+    # res_avail()
+    card_cost()
 
 
 if __name__ == "__main__":

@@ -4,11 +4,29 @@ Here are reported the results of the statistical analisys, which will be summari
 
 All results where obtained from files in `src/stats`
 
+Note: Remember to generate the graphs running:
+
+```sh
+just stats
+```
+
 ## Resource availablility
 
 It would be interesting to see how many resources of each type (base, rare and why not even money) is available through cards for every player per game per number of players in the game.
 
 This was explored in `res_avail.py`
+
+The following graphs summarise the results:
+
+![resource analisys](./../src/stats/assets/res_avail/resource_analysis_comprehensive.png)
+![resource trend](./../src/stats/assets/res_avail/resource_trend_analysis.png)
+
+This means that the avarage ratio of basa resources to rare resources in a game is:
+
+(2.33 + 3.50 + 3.11 + 2.50 + 2.50) / 5 = 13.94 / 5 = 2.79
+
+This provides a proof to justify the Resource Point system discussed later.
+
 
 ## Card cost
 
@@ -18,10 +36,10 @@ This would be interesting to know as in a given game knowing the avarage cost of
 
 Since not all resources are equal, a 'resource point' (RP) system must be used to enable the comparison between different card costs.
 
-A good RP system, totally made up on the spot without much though, would be to assign:
+A good RP system would be to assign:
 
 - 1 RP per base resource needed
 - 1 RP per money needed
 - 3 RP per rare resource needed
 
-TODO check if this is a sensible system with resource availablility stat results
+The value ration between base resource and rare resource is justified by the avarage resource availability ratio between base and rare resource is 2.79, as proven in the [Resource availablility](#resource-availability) chapter.
