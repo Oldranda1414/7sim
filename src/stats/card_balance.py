@@ -338,7 +338,6 @@ def create_average_card_distribution_chart(data):
         Type.COMMERCIAL_STRUCTURE: '#FFD700', # Yellow
         Type.MILITARY_STRUCTURE: '#DC143C',  # Red
         Type.SCIENTIFIC_STRUCTURE: '#2E8B57', # Green
-        Type.GUILD: '#9370DB'                # Purple (for Guild, since you didn't specify)
     }
     
     # Create bars with specific colors for each card type
@@ -360,12 +359,6 @@ def create_average_card_distribution_chart(data):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2., height + 0.01,
                 f'{value:.2f}', ha='center', va='bottom', fontweight='bold')
-    
-    # Add some statistics
-    total_avg = sum(averages_sorted)
-    ax.text(0.02, 0.98, f'Total average cards per player: {total_avg:.2f}',
-            transform=ax.transAxes, fontsize=12, verticalalignment='top',
-            bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
     
     plt.tight_layout()
     return fig
@@ -412,12 +405,14 @@ def main():
         total_cards = sum(data['card_types'][card_type])
         average_per_type[card_type] = total_cards / len(data['player_counts'])
     
+
+    # TODO check the math on this
     print(f"\n=== Average Card Distribution per Player (Across All Player Counts) ===")
     sorted_averages = sorted(average_per_type.items(), key=lambda x: x[1], reverse=True)
     total_avg = 0
     for card_type, avg in sorted_averages:
-        total_avg += avg
-        print(f"  {card_type.name.replace('_', ' ').title()}: {avg:.2f} cards per player")
+        total_avg += avg/sum(range(3,8))
+        print(f"  {card_type.name.replace('_', ' ').title()}: {avg/sum(range(3,8)):.2f} cards per player")
     
     print(f"  Total average cards per player: {total_avg:.2f}")
     
