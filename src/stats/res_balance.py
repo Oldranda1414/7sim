@@ -198,7 +198,7 @@ def create_rare_resources_chart(data):
     return fig
 
 def create_resource_comparison_chart(data):
-    """Create chart comparing base vs rare resources"""
+    """Create chart comparing average base vs rare resources per player"""
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
     fig.suptitle('Base vs Rare Resources Comparison', fontsize=16, fontweight='bold')
     
@@ -206,7 +206,7 @@ def create_resource_comparison_chart(data):
     total_base_per_player = data['total_base_per_player']
     total_rare_per_player = data['total_rare_per_player']
     
-    # Subplot 1: Resources per player
+    # Subplot 1: Resources per player (grouped bars)
     width = 0.35
     x = np.arange(len(player_counts))
     
@@ -230,22 +230,27 @@ def create_resource_comparison_chart(data):
             ax1.text(bar.get_x() + bar.get_width()/2., height + 0.05,
                     f'{height:.2f}', ha='center', va='bottom', fontweight='bold')
     
-    # Subplot 2: Base to Rare ratio
-    base_rare_ratio = [base/rare if rare > 0 else 0 
-                      for base, rare in zip(total_base_per_player, total_rare_per_player)]
+    # Subplot 2: Average resources per player (line chart for trends)
+    ax2.plot(player_counts, total_base_per_player, 'o-', linewidth=3, 
+             markersize=8, label='Base Resources/Player', color='#2E8B57')
+    ax2.plot(player_counts, total_rare_per_player, 's-', linewidth=3, 
+             markersize=8, label='Rare Resources/Player', color='#9370DB')
     
-    bars = ax2.bar(player_counts, base_rare_ratio, color='#FF8C00', alpha=0.7, width=0.6)
     ax2.set_xlabel('Number of Players', fontweight='bold')
-    ax2.set_ylabel('Base : Rare Ratio', fontweight='bold')
-    ax2.set_title('Base to Rare Resource Ratio per Player')
+    ax2.set_ylabel('Resources per Player', fontweight='bold')
+    ax2.set_title('Trend of Average Resources per Player')
     ax2.set_xticks(player_counts)
-    ax2.grid(True, alpha=0.3, axis='y')
+    ax2.legend()
+    ax2.grid(True, alpha=0.3)
     
-    # Add ratio labels
-    for bar, ratio in zip(bars, base_rare_ratio):
-        height = bar.get_height()
-        ax2.text(bar.get_x() + bar.get_width()/2., height + 0.1,
-                f'{ratio:.2f}:1', ha='center', va='bottom', fontweight='bold')
+    # Add value annotations on the line chart
+    for i, (base_val, rare_val) in enumerate(zip(total_base_per_player, total_rare_per_player)):
+        ax2.annotate(f'{base_val:.2f}', (player_counts[i], base_val), 
+                    textcoords="offset points", xytext=(0,10), ha='center', 
+                    fontweight='bold', color='#2E8B57')
+        ax2.annotate(f'{rare_val:.2f}', (player_counts[i], rare_val), 
+                    textcoords="offset points", xytext=(0,10), ha='center', 
+                    fontweight='bold', color='#9370DB')
     
     plt.tight_layout()
     return fig
