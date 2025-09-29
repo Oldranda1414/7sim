@@ -155,7 +155,7 @@ The results are summarized in the following graphs:
 
 ## Card type distribution
 
-What is an avarage city card type distribution?
+What is an average city card type distribution?
 
 This was explored in `card_balance.py`
 
@@ -313,3 +313,33 @@ These results prove that the game is pretty well built as most value distributio
 ## Card Type Point Cost
 
 All the statistics gathered till now will enable us to evaluate the Point production per Resource Point for every card type
+
+This was explored in `card_value.py`
+
+### Blue cards
+
+- Altar: 4
+- Theater: 4
+- Well: 4
+- Baths: 3.0
+- Courthouse: 0.8
+- Temple: 0.8
+- Statue: 1.3333333333333333
+- Acqueduct: 1.6666666666666667
+- Gardens: 1.6666666666666667
+- Senate: 1.5
+- Town Hall: 1.0
+- Pantheon: 0.5833333333333334
+- Palace: 0.6153846153846154
+
+average card value: 1.9204142011834322
+average card value removing first era cards: 1.1072649572649573
+
+The best cards:
+
+- era 1:
+    - Altar, Theater, Well
+- era 2:
+    - Acqueduct
+- era 3:
+    - Gardens, (Senate close second)

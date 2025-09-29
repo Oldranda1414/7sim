@@ -1,17 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from load.cards import load_cards, load_guild_cards
-from engine.card import Cost
-from engine.game_resource import resource_type, ResourceType
-
-def _get_rp(cost: Cost) -> int:
-    total = cost.money
-    for resource in cost.resources:
-        if resource_type(resource) == ResourceType.BASE:
-            total += 1
-        elif resource_type(resource) == ResourceType.RARE:
-            total += 3
-    return total
+from stats.util import get_rp
 
 def collect_cost_data():
     """Collect cost data for all player counts and eras"""
@@ -35,7 +25,7 @@ def collect_cost_data():
                 cards += load_guild_cards()
             total_cost = 0
             for card in cards:
-                cost_value = _get_rp(card.cost)
+                cost_value = get_rp(card.cost)
                 total_cost += cost_value
                 total_cost_all_eras += cost_value
                 era_costs[era] += cost_value

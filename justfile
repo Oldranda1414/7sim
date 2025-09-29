@@ -43,5 +43,5 @@ doc:
 # Build and open the slides
 [no-exit-message]
 slides:
-  marp slides.md --pdf --output slides.pdf
-  open slides.pdf
+  open slides.pdf &
+  marp slides.md --pdf --output slides.pdf -w --allow-local-files
