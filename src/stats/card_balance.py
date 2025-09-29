@@ -15,7 +15,8 @@ def collect_card_type_data():
         Type.CIVIC_STRUCTURE: [],
         Type.COMMERCIAL_STRUCTURE: [],
         Type.MILITARY_STRUCTURE: [],
-        Type.SCIENTIFIC_STRUCTURE: []
+        Type.SCIENTIFIC_STRUCTURE: [],
+        Type.GUILD: []
     }
 
     total_cards_per_player = []
@@ -30,7 +31,13 @@ def collect_card_type_data():
             if c_type in count:
                 count[c_type] += 1
 
-        total_cards = len(cards)
+        # Add guild cards (number of players + 2)
+        guild_count = player_number + 2
+        count[Type.GUILD] += guild_count
+
+        # Total cards includes guilds
+        total_cards = len(cards) + guild_count
+
         # Cards per player (on average) for this player count
         total_cards_per_player.append(total_cards / player_number if player_number > 0 else 0.0)
 
@@ -60,6 +67,7 @@ default_map = {
     Type.COMMERCIAL_STRUCTURE: '#FFD700', # Yellow
     Type.MILITARY_STRUCTURE: '#DC143C',   # Red
     Type.SCIENTIFIC_STRUCTURE: '#32CD32', # Green
+    Type.GUILD: '#800080' # Purple
 }
 cmap = plt.get_cmap('tab10')
 

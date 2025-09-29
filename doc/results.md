@@ -162,65 +162,69 @@ This was explored in `card_balance.py`
 ![card distribution](./../src/stats/assets/card_balance/card_availability.png)
 ![card distribution average](./../src/stats/assets/card_balance/average_card_distribution.png)
 
-This shows that an average distribution across all games for every card type is for every city/player to have 3/4 of every card type, with the exception of manufactured goods card, which would be present 1/2 per city/player.
-
+This shows that an average distribution across all games for every card type is for every city/player to have 3/4 of every card type, with the exception of manufactured goods and guild cards, which would be present 1/2 per city/player.
 
 ### Card Type Distribution Summary
 
 3 players:
-  Total cards: 58
-  Cards per player: 19.33
+  Total cards: 63
+  Cards per player: 21.00
   Card Type Breakdown:
-    Raw Material: 10 (17.2%)
-    Manufactured Good: 6 (10.3%)
-    Civic Structure: 12 (20.7%)
-    Commercial Structure: 9 (15.5%)
-    Military Structure: 9 (15.5%)
-    Scientific Structure: 12 (20.7%)
+    Raw Material: 10 (15.9%)
+    Manufactured Good: 6 (9.5%)
+    Civic Structure: 12 (19.0%)
+    Commercial Structure: 9 (14.3%)
+    Military Structure: 9 (14.3%)
+    Scientific Structure: 12 (19.0%)
+    Guild: 5 (7.9%)
 
 4 players:
-  Total cards: 76
-  Cards per player: 19.00
+  Total cards: 82
+  Cards per player: 20.50
   Card Type Breakdown:
-    Raw Material: 15 (19.7%)
-    Manufactured Good: 6 (7.9%)
-    Civic Structure: 14 (18.4%)
-    Commercial Structure: 13 (17.1%)
-    Military Structure: 13 (17.1%)
-    Scientific Structure: 15 (19.7%)
+    Raw Material: 15 (18.3%)
+    Manufactured Good: 6 (7.3%)
+    Civic Structure: 14 (17.1%)
+    Commercial Structure: 13 (15.9%)
+    Military Structure: 13 (15.9%)
+    Scientific Structure: 15 (18.3%)
+    Guild: 6 (7.3%)
 
 5 players:
-  Total cards: 99
-  Cards per player: 19.80
+  Total cards: 106
+  Cards per player: 21.20
   Card Type Breakdown:
-    Raw Material: 20 (20.2%)
-    Manufactured Good: 9 (9.1%)
-    Civic Structure: 17 (17.2%)
-    Commercial Structure: 17 (17.2%)
-    Military Structure: 17 (17.2%)
-    Scientific Structure: 19 (19.2%)
+    Raw Material: 20 (18.9%)
+    Manufactured Good: 9 (8.5%)
+    Civic Structure: 17 (16.0%)
+    Commercial Structure: 17 (16.0%)
+    Military Structure: 17 (16.0%)
+    Scientific Structure: 19 (17.9%)
+    Guild: 7 (6.6%)
 
 6 players:
-  Total cards: 118
-  Cards per player: 19.67
+  Total cards: 126
+  Cards per player: 21.00
   Card Type Breakdown:
-    Raw Material: 22 (18.6%)
-    Manufactured Good: 12 (10.2%)
-    Civic Structure: 21 (17.8%)
-    Commercial Structure: 23 (19.5%)
-    Military Structure: 20 (16.9%)
-    Scientific Structure: 20 (16.9%)
+    Raw Material: 22 (17.5%)
+    Manufactured Good: 12 (9.5%)
+    Civic Structure: 21 (16.7%)
+    Commercial Structure: 23 (18.3%)
+    Military Structure: 20 (15.9%)
+    Scientific Structure: 20 (15.9%)
+    Guild: 8 (6.3%)
 
 7 players:
-  Total cards: 138
-  Cards per player: 19.71
+  Total cards: 147
+  Cards per player: 21.00
   Card Type Breakdown:
-    Raw Material: 22 (15.9%)
-    Manufactured Good: 12 (8.7%)
-    Civic Structure: 26 (18.8%)
-    Commercial Structure: 29 (21.0%)
-    Military Structure: 25 (18.1%)
-    Scientific Structure: 24 (17.4%)
+    Raw Material: 22 (15.0%)
+    Manufactured Good: 12 (8.2%)
+    Civic Structure: 26 (17.7%)
+    Commercial Structure: 29 (19.7%)
+    Military Structure: 25 (17.0%)
+    Scientific Structure: 24 (16.3%)
+    Guild: 9 (6.1%)
 
 #### Average Card Distribution per Player (Across All Player Counts)
   Scientific Structure: 3.66 cards per player
@@ -229,7 +233,8 @@ This shows that an average distribution across all games for every card type is 
   Commercial Structure: 3.53 cards per player
   Military Structure: 3.31 cards per player
   Manufactured Good: 1.80 cards per player
-  Total average cards per player (sum over types): 19.50
+  Guild: 1.44 cards per player
+  Total average cards per player (sum over types): 20.94
 
 ## Card cost
 
@@ -304,3 +309,7 @@ This was explored in `card_cost.py`
 - Era 2 → Era 3: +158.0% increase
 
 These results prove that the game is pretty well built as most value distributions have very low variance, too low to be accidental.
+
+## Card Type Point Cost
+
+All the statistics gathered till now will enable us to evaluate the Point production per Resource Point for every card type
