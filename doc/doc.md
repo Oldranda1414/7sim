@@ -23,7 +23,7 @@ Card info taken from : https://7-wonders.fandom.com/wiki/List_of_Cards#Overview
 - statistics:
   - median card cost (era/playercount/total)
   - card type per era/playercount/total
-  - balamced game card value estimate per number of players
+  - balanced game card value estimate per number of players
 - dumb game simulation
 - strategy comparison
 
