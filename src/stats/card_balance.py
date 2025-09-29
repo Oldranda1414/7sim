@@ -53,6 +53,24 @@ def _center_offsets(num_bars, width):
     center = (num_bars - 1) / 2.0
     return [width * (i - center) for i in range(num_bars)]
 
+default_map = {
+    Type.RAW_MATERIAL: '#8B4513',         # Brown
+    Type.MANUFACTURED_GOOD: '#808080',    # Grey
+    Type.CIVIC_STRUCTURE: '#1E90FF',      # Blue
+    Type.COMMERCIAL_STRUCTURE: '#FFD700', # Yellow
+    Type.MILITARY_STRUCTURE: '#DC143C',   # Red
+    Type.SCIENTIFIC_STRUCTURE: '#32CD32', # Green
+}
+cmap = plt.get_cmap('tab10')
+
+def get_color(card_type, i=0):
+    """Return color for a card type, fallback to colormap if not in default_map."""
+    return default_map.get(card_type, cmap(i % 10))
+
+def get_colors(types):
+    """Return colors for a sequence of card types."""
+    return [get_color(t, i) for i, t in enumerate(types)]
+
 def create_card_type_distribution_chart(data):
     """Create chart for card type distribution with grouped bars"""
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 7))
@@ -68,13 +86,13 @@ def create_card_type_distribution_chart(data):
     types = list(card_types.keys())
 
     # Choose colors dynamically (one per type)
-    base_colors = ['#8B4513', '#FFD700', '#2E8B57', '#1E90FF', '#DC143C', '#8A2BE2']
-    if len(types) > len(base_colors):
+    types = list(card_types.keys())
+    colors = get_colors(types)
+    if len(types) > len(colors):
         # fallback to a colormap if more types exist
-        cmap = plt.get_cmap('tab10')
         colors = [cmap(i % 10) for i in range(len(types))]
     else:
-        colors = base_colors[:len(types)]
+        colors = colors[:len(types)]
 
     offsets = _center_offsets(len(types), width)
 
@@ -136,8 +154,8 @@ def create_card_type_trends_chart(data):
     types = list(card_types.keys())
 
     # Colors/markers sized to types
-    cmap = plt.get_cmap('tab10')
-    colors = [cmap(i % 10) for i in range(len(types))]
+    types = list(card_types.keys())
+    colors = get_colors(types)
     markers = ['o', 's', '^', 'D', 'v', '<', '>', 'p', 'X', '*'][:len(types)]
 
     for card_type_key, color, marker in zip(types, colors, markers):
@@ -198,8 +216,7 @@ def create_card_type_comparison_chart(data):
     x = np.arange(len(player_counts))
     width = 0.12
     types = list(card_types.keys())
-    cmap = plt.get_cmap('tab10')
-    colors = [cmap(i % 10) for i in range(len(types))]
+    colors = get_colors(types)
     offsets = _center_offsets(len(types), width)
 
     for i, (card_type_key, color) in enumerate(zip(types, colors)):
@@ -292,7 +309,6 @@ def create_comprehensive_card_analysis_plot(data):
     # Subplot 4: Dominant card types (top 3 for each player count)
     width = 0.25
     x = np.arange(len(player_counts))
-    cmap = plt.get_cmap('Set3')
     legend_labels = set()
 
     for i, player_count in enumerate(player_counts):
@@ -303,7 +319,7 @@ def create_comprehensive_card_analysis_plot(data):
 
         for j, (card_type_key, percentage) in enumerate(top_3):
             offset = width * (j - 1)
-            color = cmap(j / max(2, len(top_3) - 1))  # normalized
+            color = get_color(card_type_key, j)
             label = None
             if card_type_key not in legend_labels:
                 label = card_type_key.name.replace('_', ' ').title()
@@ -348,16 +364,7 @@ def create_average_card_distribution_chart(data):
     fig, ax = plt.subplots(figsize=(12, 8))
 
     # Define color mapping based on card type (fallback to colormap if missing)
-    default_map = {
-        Type.RAW_MATERIAL: '#8B4513',        # Brown
-        Type.MANUFACTURED_GOOD: '#808080',   # Grey
-        Type.CIVIC_STRUCTURE: '#1E90FF',     # Blue
-        Type.COMMERCIAL_STRUCTURE: '#FFD700', # Yellow
-        Type.MILITARY_STRUCTURE: '#DC143C',  # Red
-        Type.SCIENTIFIC_STRUCTURE: '#32CD32', # Green
-    }
-    cmap = plt.get_cmap('tab10')
-    colors = [default_map.get(ct, cmap(i % 10)) for i, ct in enumerate(types_sorted)]
+    colors = get_colors(types_sorted)
 
     bars = ax.bar(range(len(types_sorted)), averages_sorted, color=colors, alpha=0.8)
 
