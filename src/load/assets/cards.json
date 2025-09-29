@@ -1,0 +1,613 @@
+{
+  "cards": [
+    {
+      "name": "Lumber Yard",
+      "type": "RAW_MATERIAL",
+      "cost": {},
+      "product": [["WOOD"]],
+      "require_icon": null
+    },
+    {
+      "name": "Ore Vain",
+      "type": "RAW_MATERIAL",
+      "cost": {},
+      "product": [["ORE"]],
+      "require_icon": null
+    },
+    {
+      "name": "Stone Pit",
+      "type": "RAW_MATERIAL",
+      "cost": {},
+      "product": [["STONE"]],
+      "require_icon": null
+    },
+    {
+      "name": "Clay Pool",
+      "type": "RAW_MATERIAL",
+      "product": [["BRICK"]],
+      "cost": {},
+      "require_icon": null
+    },
+    {
+      "name": "Timber Yard",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["WOOD"], ["STONE"]],
+      "require_icon": null
+    },
+    {
+      "name": "Clay Pit",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["ORE"], ["BRICK"]],
+      "require_icon": null
+    },
+    {
+      "name": "Excavation",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["STONE"], ["BRICK"]],
+      "require_icon": null
+    },
+    {
+      "name": "Forest Cave",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["WOOD"], ["ORE"]],
+      "require_icon": null
+    },
+    {
+      "name": "Tree Farm",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["WOOD"], ["BRICK"]],
+      "require_icon": null
+    },
+    {
+      "name": "Mine",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["STONE"], ["ORE"]],
+      "require_icon": null
+    },
+    {
+      "name": "Sawmill",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["WOOD", "WOOD"]],
+      "require_icon": null
+    },
+    {
+      "name": "Foundry",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["ORE", "ORE"]],
+      "require_icon": null
+    },
+    {
+      "name": "Quarry",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["STONE", "STONE"]],
+      "require_icon": null
+    },
+    {
+      "name": "Brickyard",
+      "type": "RAW_MATERIAL",
+      "cost": {
+        "money": 1,
+        "resources": []
+      },
+      "product": [["BRICK", "BRICK"]],
+      "require_icon": null
+    },
+    {
+      "name": "Glassworks",
+      "type": "MANUFACTURED_GOOD",
+      "cost": {},
+      "product": [["GLASS"]],
+      "require_icon": null
+    },
+    {
+      "name": "Press",
+      "type": "MANUFACTURED_GOOD",
+      "cost": {},
+      "product": [["PAPYRUS"]],
+      "require_icon": null
+    },
+    {
+      "name": "Loom",
+      "type": "MANUFACTURED_GOOD",
+      "cost": {},
+      "product": [["TEXTILES"]],
+      "require_icon": null
+    },
+    {
+      "name": "Altar",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {},
+      "victory": 3,
+      "require_icon": null
+    },
+    {
+      "name": "Theater",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {},
+      "victory": 3,
+      "require_icon": null
+    },
+    {
+      "name": "Well",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {},
+      "victory": 3,
+      "require_icon": null
+    },
+    {
+      "name": "Baths",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE"]
+      },
+      "victory": 3,
+      "require_icon": null
+    },
+    {
+      "name": "Courthouse",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "TEXTILES"]
+      },
+      "victory": 4,
+      "require_icon": "Scriptorium"
+    },
+    {
+      "name": "Temple",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "BRICK", "GLASS"]
+      },
+      "victory": 4,
+      "require_icon": null
+    },
+    {
+      "name": "Statue",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "WOOD"]
+      },
+      "victory": 4,
+      "require_icon": "Well"
+    },
+    {
+      "name": "Acqueduct",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE"]
+      },
+      "victory": 5,
+      "require_icon": "Baths"
+    },
+    {
+      "name": "Gardens",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "WOOD"]
+      },
+      "victory": 5,
+      "require_icon": "Theater"
+    },
+    {
+      "name": "Senate",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "STONE", "ORE"]
+      },
+      "victory": 6,
+      "require_icon": "Library"
+    },
+    {
+      "name": "Town Hall",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE", "GLASS"]
+      },
+      "victory": 6,
+      "require_icon": null
+    },
+    {
+      "name": "Pantheon",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "ORE", "GLASS", "PAPYRUS", "TEXTILES"]
+      },
+      "victory": 7,
+      "require_icon": "Altar"
+    },
+    {
+      "name": "Palace",
+      "type": "CIVIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "STONE", "ORE", "BRICK", "GLASS", "PAPYRUS", "TEXTILES"]
+      },
+      "victory": 8,
+      "require_icon": null
+    },
+    {
+      "name": "Tavern",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "require_icon": null
+    },
+    {
+      "name": "West Trading Post",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "require_icon": null
+    },
+    {
+      "name": "East Trading Post",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "require_icon": null
+    },
+    {
+      "name": "Marketplace",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "require_icon": null
+    },
+    {
+      "name": "Caravansery",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD"]
+      },
+      "require_icon": "Marketplace"
+    },
+    {
+      "name": "Forum",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK"]
+      },
+      "require_icon": "Trading Post"
+    },
+    {
+      "name": "Vineyard",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "require_icon": null
+    },
+    {
+      "name": "Bazaar",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {},
+      "require_icon": null
+    },
+    {
+      "name": "Lighthouse",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "GLASS"]
+      },
+      "require_icon": "Caravansery"
+    },
+    {
+      "name": "Haven",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "ORE", "TEXTILES"]
+      },
+      "require_icon": null
+    },
+    {
+      "name": "Chamber of Commerce",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "PAPYRUS"]
+      },
+      "require_icon": null
+    },
+    {
+      "name": "Ludus",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "ORE"]
+      },
+      "require_icon": null
+    },
+    {
+      "name": "Arena",
+      "type": "COMMERCIAL_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "ORE"]
+      },
+      "require_icon": "Dispensary"
+    },
+    {
+      "name": "Guard Tower",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK"]
+      },
+      "military": 1,
+      "require_icon": null
+    },
+    {
+      "name": "Baracks",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE"]
+      },
+      "military": 1,
+      "require_icon": null
+    },
+    {
+      "name": "Stockade",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD"]
+      },
+      "military": 1,
+      "require_icon": null
+    },
+    {
+      "name": "Stables",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "ORE", "BRICK"]
+      },
+      "military": 2,
+      "require_icon": "Apothecary"
+    },
+    {
+      "name": "Archery Range",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "ORE"]
+      },
+      "military": 2,
+      "require_icon": "Workshop"
+    },
+    {
+      "name": "Walls",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE"]
+      },
+      "military": 2,
+      "require_icon": null
+    },
+    {
+      "name": "Training Ground",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "WOOD"]
+      },
+      "military": 2,
+      "require_icon": null
+    },
+    {
+      "name": "Arsenal",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "ORE", "TEXTILES"]
+      },
+      "military": 3,
+      "require_icon": null
+    },
+    {
+      "name": "Siege Workshop",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "BRICK", "WOOD"]
+      },
+      "military": 3,
+      "require_icon": "Laboratory"
+    },
+    {
+      "name": "Fortifications",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "ORE", "BRICK"]
+      },
+      "military": 3,
+      "require_icon": "Walls"
+    },
+    {
+      "name": "Circus",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "BRICK", "ORE"]
+      },
+      "military": 3,
+      "require_icon": "Training Ground"
+    },
+    {
+      "name": "Castrum",
+      "type": "MILITARY_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "WOOD", "PAPYRUS"]
+      },
+      "military": 3,
+      "require_icon": null
+    },
+    {
+      "name": "Scriptorium",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["PAPYRUS"]
+      },
+      "science": "WRITING",
+      "require_icon": null
+    },
+    {
+      "name": "Apothecary",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["TEXTILES"]
+      },
+      "science": "MATHEMATICS",
+      "require_icon": null
+    },
+    {
+      "name": "Workshop",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["GLASS"]
+      },
+      "science": "ENGINEERING",
+      "require_icon": null
+    },
+    {
+      "name": "Dispensary",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "GLASS"]
+      },
+      "science": "MATHEMATICS",
+      "require_icon": "Apothecary"
+    },
+    {
+      "name": "Laboratory",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "PAPYRUS"]
+      },
+      "science": "ENGINEERING",
+      "require_icon": "Workshop"
+    },
+    {
+      "name": "Library",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "TEXTILES"]
+      },
+      "science": "WRITING",
+      "require_icon": "Scriptorium"
+    },
+    {
+      "name": "School",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "PAPYRUS"]
+      },
+      "science": "WRITING",
+      "require_icon": null
+    },
+    {
+      "name": "University",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "GLASS", "PAPYRUS"]
+      },
+      "science": "WRITING",
+      "require_icon": "Library"
+    },
+    {
+      "name": "Study",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "PAPYRUS", "TEXTILES"]
+      },
+      "science": "ENGINEERING",
+      "require_icon": "School"
+    },
+    {
+      "name": "Lodge",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "PAPYRUS", "TEXTILES"]
+      },
+      "science": "MATHEMATICS",
+      "require_icon": "Dispensary"
+    },
+    {
+      "name": "Academy",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE", "GLASS"]
+      },
+      "science": "MATHEMATICS",
+      "require_icon": "School"
+    },
+    {
+      "name": "Observatory",
+      "type": "SCIENTIFIC_STRUCTURE",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "GLASS", "TEXTILES"]
+      },
+      "science": "ENGINEERING",
+      "require_icon": "Laboratory"
+    }
+  ]
+}

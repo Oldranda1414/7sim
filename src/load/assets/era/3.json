@@ -1,0 +1,84 @@
+{
+  "era": [
+    {
+      "name": "Gardens",
+      "number": [1, 2, 2, 2, 2] 
+    },
+    {
+      "name": "Senate",
+      "number": [1, 1, 2, 2, 2] 
+    },
+    {
+      "name": "Town Hall",
+      "number": [1, 1, 1, 2, 2] 
+    },
+    {
+      "name": "Pantheon",
+      "number": [1, 1, 1, 2, 2] 
+    },
+    {
+      "name": "Palace",
+      "number": [1, 1, 1, 1, 2] 
+    },
+    {
+      "name": "Lighthouse",
+      "number": [1, 1, 1, 2, 2] 
+    },
+    {
+      "name": "Haven",
+      "number": [1, 2, 2, 2, 2] 
+    },
+    {
+      "name": "Chamber of Commerce",
+      "number": [0, 1, 1, 2, 2] 
+    },
+    {
+      "name": "Ludus",
+      "number": [0, 0, 1, 1, 2] 
+    },
+    {
+      "name": "Arena",
+      "number": [1, 1, 2, 2, 2] 
+    },
+    {
+      "name": "Arsenal",
+      "number": [1, 1, 2, 2, 2] 
+    },
+    {
+      "name": "Siege Workshop",
+      "number": [1, 1, 2, 2, 2] 
+    },
+    {
+      "name": "Fortifications",
+      "number": [1, 1, 1, 1, 2] 
+    },
+    {
+      "name": "Circus",
+      "number": [0, 1, 1, 2, 2] 
+    },
+    {
+      "name": "Castrum",
+      "number": [0, 1, 1, 1, 2] 
+    },
+    {
+      "name": "University",
+      "number": [1, 2, 2, 2, 2] 
+    },
+    {
+      "name": "Study",
+      "number": [1, 1, 2, 2, 2] 
+    },
+    {
+      "name": "Lodge",
+      "number": [1, 1, 1, 2, 2] 
+    },
+    {
+      "name": "Academy",
+      "number": [1, 1, 1, 1, 2] 
+    },
+    {
+      "name": "Observatory",
+      "number": [1, 1, 1, 1, 2] 
+    }
+  ]
+}

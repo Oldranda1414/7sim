@@ -1,0 +1,84 @@
+{
+  "cards": [
+    {
+      "name": "Workers Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "WOOD","STONE", "BRICK"]
+      }
+    },
+    {
+      "name": "Craftsmens Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "ORE"]
+      }
+    },
+    {
+      "name": "Magistrates Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "WOOD", "STONE", "TEXTILES"]
+      }
+    },
+    {
+      "name": "Traders Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["GLASS", "PAPYRUS", "TEXTILES"]
+      }
+    },
+    {
+      "name": "Spies Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "GLASS"]
+      }
+    },
+    {
+      "name": "Philosophers Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["BRICK", "BRICK", "BRICK", "PAPYRUS", "TEXTILES"]
+      }
+    },
+    {
+      "name": "Shipowners Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "WOOD", "GLASS", "PAPYRUS"]
+      }
+    },
+    {
+      "name": "Scientists Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["WOOD", "WOOD", "ORE", "ORE", "PAPYRUS"]
+      }
+    },
+    {
+      "name": "Decorators Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["ORE", "ORE", "STONE", "TEXTILES"]
+      }
+    },
+    {
+      "name": "Builders Guild",
+      "type": "GUILD",
+      "cost": {
+        "money": 0,
+        "resources": ["STONE", "STONE", "STONE", "BRICK", "BRICK", "GLASS"]
+      }
+    }
+  ]
+}

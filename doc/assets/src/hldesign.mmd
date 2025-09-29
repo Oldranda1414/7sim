@@ -1,0 +1,107 @@
+---
+config:
+  class:
+    hideEmptyMembersBox: true
+  layout: elk
+---
+classDiagram
+    class loader {
+        load_cards(era: int, player_number: int) -> list[Card]
+    }
+    loader ..> Card
+    loader ..> Card_Type
+    loader ..> Resource
+    loader ..> Icon
+
+    class Game {
+        decks: tuple[Deck]
+        players: list[Player]
+        discard_pile: Pile
+        \_\_init\_\_(players: list[Player])
+        run()
+    }
+    Game ..> Player
+    Game ..> Deck
+    Game ..> Pile
+
+    class Player {
+        hand: list[Card]
+        city: City
+        \_\_init\_\_(strat: Strategy)
+        execute_turn(list[Player])
+    }
+    Player ..> Strategy
+    Player ..> City
+    Player ..> Card
+
+    class Strategy {
+        %% \_\_init\_\_()
+    }
+
+    class Deck {
+        \_\_init\_\_(cards: list[Card])
+        draw()
+    }
+    Deck ..> Card
+
+    class Pile {
+        \_\_init\_\_()
+        cards: list[Card]
+    }
+    Pile ..> Card
+
+    class Card {
+        name: str
+        cost: list[Resource]
+        require_icon: str | None
+        \_\_init\_\_(name, cost, require_icon)
+    }
+    Card ..> Resource
+
+    class Card_Type {
+      RAW_MATERIAL
+      MANUFACTURED_GOOD
+      CIVIC_STRUCTURE
+      COMMERCIAL_STRUCTURE
+      MILITARY_STRUCTURE
+      SCIENTIFIC_STRUCTURE
+      GUILD
+    }
+    Card_Type ..> Enum
+
+    class Resource {
+      WOOD
+      ORE
+      BRICK
+      STONE
+      GLASS
+      PAPYRUS
+      TEXTILES
+    }
+    Resource ..> Enum
+
+    class City {
+        name: str
+        wonder: Wonder
+        money: int
+        war_points: int
+        cards: list[Card]
+        productions: list[Production]
+        \_\_init\_\_(name: str, wonder: Wonder, base_resource: Resource)
+    }
+    City ..> Card
+    City ..> Wonder
+    City ..> Resource
+    City ..> Production
+
+    class Production {
+        product: list[list[Resource]]
+        \_\_init\_\_(product: list[list[Resource]])
+    }
+    Production ..> Resource
+
+    class Wonder {
+        current_stage: int
+        \_\_init\_\_(stage_effects: list[Callables?])
+    }
+
