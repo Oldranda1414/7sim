@@ -16,6 +16,8 @@ wheels/
 # generated files
 doc/build/*.pdf
 doc/assets/mermaid/*.png
+slides.pdf
+slides.pptx
 
 # python cache files
 src/**/.null*.py

@@ -39,3 +39,9 @@ build-doc:
 doc:
   ./doc/bin/build_report.sh
   open ./doc/build/doc.pdf &
+
+# Build and open the slides
+[no-exit-message]
+slides:
+  marp slides.md --pdf --output slides.pdf
+  open slides.pdf
