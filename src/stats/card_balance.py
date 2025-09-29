@@ -191,28 +191,13 @@ def create_card_type_trends_chart(data):
 
 def create_card_type_comparison_chart(data):
     """Create chart comparing card availability per player"""
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
-    fig.suptitle('Card Availability Analysis', fontsize=16, fontweight='bold')
+    fig, ax = plt.subplots(figsize=(12, 8))
+    fig.suptitle('Cards per player by type', fontsize=16, fontweight='bold')
 
     player_counts = data['player_counts']
-    total_cards_per_player = data['total_cards_per_player']
     card_types = data['card_types']
 
-    # Subplot 1: Total cards per player
-    bars = ax1.bar(player_counts, total_cards_per_player,
-                   color='#4682B4', alpha=0.7, width=0.6)
-    ax1.set_xlabel('Number of Players', fontweight='bold')
-    ax1.set_ylabel('Cards per Player', fontweight='bold')
-    ax1.set_title('Average Cards Available per Player')
-    ax1.set_xticks(player_counts)
-    ax1.grid(True, alpha=0.3, axis='y')
-
-    # Add value labels
-    for bar, value in zip(bars, total_cards_per_player):
-        ax1.text(bar.get_x() + bar.get_width() / 2., value + 0.1,
-                 f'{value:.2f}', ha='center', va='bottom', fontweight='bold')
-
-    # Subplot 2: Cards per player by type (grouped bars)
+    # Cards per player by type (grouped bars)
     x = np.arange(len(player_counts))
     width = 0.12
     types = list(card_types.keys())
@@ -223,22 +208,22 @@ def create_card_type_comparison_chart(data):
         offset = offsets[i]
         cards_per_player = [count / players if players > 0 else 0.0
                             for count, players in zip(card_types[card_type_key], player_counts)]
-        bars = ax2.bar(x + offset, cards_per_player, width,
+        bars = ax.bar(x + offset, cards_per_player, width,
                        label=card_type_key.name.replace('_', ' ').title(),
                        color=color, alpha=0.8)
 
         for bar, value in zip(bars, cards_per_player):
             if value > 0.1:  # Only label if significant
-                ax2.text(bar.get_x() + bar.get_width() / 2., value + 0.02,
+                ax.text(bar.get_x() + bar.get_width() / 2., value + 0.02,
                          f'{value:.2f}', ha='center', va='bottom', fontsize=7)
 
-    ax2.set_xlabel('Number of Players', fontweight='bold')
-    ax2.set_ylabel('Cards per Player', fontweight='bold')
-    ax2.set_title('Cards per Player by Type\n(Grouped Bars)')
-    ax2.set_xticks(x)
-    ax2.set_xticklabels(player_counts)
-    ax2.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-    ax2.grid(True, alpha=0.3, axis='y')
+    ax.set_xlabel('Number of Players', fontweight='bold')
+    ax.set_ylabel('Cards per Player', fontweight='bold')
+    ax.set_title('Cards per Player by Type\n(Grouped Bars)')
+    ax.set_xticks(x)
+    ax.set_xticklabels(player_counts)
+    ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+    ax.grid(True, alpha=0.3, axis='y')
 
     plt.tight_layout(rect=[0, 0, 1, 0.95])
     return fig

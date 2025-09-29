@@ -159,6 +159,12 @@ What is an avarage city card type distribution?
 
 This was explored in `card_balance.py`
 
+![card distribution](./../src/stats/assets/card_balance/card_availability.png)
+![card distribution average](./../src/stats/assets/card_balance/average_card_distribution.png)
+
+This shows that an average distribution across all games for every card type is for every city/player to have 3/4 of every card type, with the exception of manufactured goods card, which would be present 1/2 per city/player.
+
+
 ### Card Type Distribution Summary
 
 3 players:
@@ -217,71 +223,13 @@ This was explored in `card_balance.py`
     Scientific Structure: 24 (17.4%)
 
 #### Average Card Distribution per Player (Across All Player Counts)
-  Commercial Structure: 18.20 cards per player
-  Civic Structure: 18.00 cards per player
-  Scientific Structure: 18.00 cards per player
-  Raw Material: 17.80 cards per player
-  Military Structure: 16.80 cards per player
-  Manufactured Good: 9.00 cards per player
-  Total average cards per player: 97.80
-
-### Card Type Distribution Summary ===
-
-3 players:
-  Total cards: 58
-  Cards per player: 19.33
-  Card Type Breakdown:
-    Raw Material: 10 (17.2%)
-    Manufactured Good: 6 (10.3%)
-    Civic Structure: 12 (20.7%)
-    Commercial Structure: 9 (15.5%)
-    Military Structure: 9 (15.5%)
-    Scientific Structure: 12 (20.7%)
-
-4 players:
-  Total cards: 76
-  Cards per player: 19.00
-  Card Type Breakdown:
-    Raw Material: 15 (19.7%)
-    Manufactured Good: 6 (7.9%)
-    Civic Structure: 14 (18.4%)
-    Commercial Structure: 13 (17.1%)
-    Military Structure: 13 (17.1%)
-    Scientific Structure: 15 (19.7%)
-
-5 players:
-  Total cards: 99
-  Cards per player: 19.80
-  Card Type Breakdown:
-    Raw Material: 20 (20.2%)
-    Manufactured Good: 9 (9.1%)
-    Civic Structure: 17 (17.2%)
-    Commercial Structure: 17 (17.2%)
-    Military Structure: 17 (17.2%)
-    Scientific Structure: 19 (19.2%)
-
-6 players:
-  Total cards: 118
-  Cards per player: 19.67
-  Card Type Breakdown:
-    Raw Material: 22 (18.6%)
-    Manufactured Good: 12 (10.2%)
-    Civic Structure: 21 (17.8%)
-    Commercial Structure: 23 (19.5%)
-    Military Structure: 20 (16.9%)
-    Scientific Structure: 20 (16.9%)
-
-7 players:
-  Total cards: 138
-  Cards per player: 19.71
-  Card Type Breakdown:
-    Raw Material: 22 (15.9%)
-    Manufactured Good: 12 (8.7%)
-    Civic Structure: 26 (18.8%)
-    Commercial Structure: 29 (21.0%)
-    Military Structure: 25 (18.1%)
-    Scientific Structure: 24 (17.4%)
-
+  Scientific Structure: 3.66 cards per player
+  Civic Structure: 3.62 cards per player
+  Raw Material: 3.58 cards per player
+  Commercial Structure: 3.53 cards per player
+  Military Structure: 3.31 cards per player
+  Manufactured Good: 1.80 cards per player
+  Total average cards per player (sum over types): 19.50
 
 ## Card cost
 
