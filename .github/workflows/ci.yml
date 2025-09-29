@@ -57,9 +57,18 @@ jobs:
           marp slides.md --pdf --output slides.pdf
           marp slides.md --pptx --output slides.pptx
 
+      - name: Create or update "latest" tag
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git tag -f latest
+          git push origin -f latest
+
       - name: Upload release artifacts
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: latest
+          name: Latest Presentation
           files: |
             slides.pdf
             slides.pptx
