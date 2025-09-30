@@ -274,6 +274,9 @@
       "name": "Tavern",
       "type": "COMMERCIAL_STRUCTURE",
       "cost": {},
+      "gain": {
+        "coins": 5
+      },
       "require_icon": null
     },
     {
@@ -316,12 +319,28 @@
       "name": "Vineyard",
       "type": "COMMERCIAL_STRUCTURE",
       "cost": {},
+      "gain": {
+        "brown": {
+          "coins": {
+            "own": 1,
+            "neighbor": 1
+          }
+        }
+      },
       "require_icon": null
     },
     {
       "name": "Bazaar",
       "type": "COMMERCIAL_STRUCTURE",
       "cost": {},
+      "gain": {
+        "grey": {
+          "coins": {
+            "own": 2,
+            "neighbor": 2
+          }
+        }
+      },
       "require_icon": null
     },
     {
@@ -330,6 +349,16 @@
       "cost": {
         "money": 0,
         "resources": ["STONE", "GLASS"]
+      },
+      "gain": {
+        "yellow": {
+          "coins": {
+            "own": 1
+          },
+          "victory": {
+            "own": 1
+          }
+        }
       },
       "require_icon": "Caravansery"
     },
@@ -340,6 +369,16 @@
         "money": 0,
         "resources": ["WOOD", "ORE", "TEXTILES"]
       },
+      "gain": {
+        "brown": {
+          "coins": {
+            "own": 1
+          },
+          "victory": {
+            "own": 1
+          }
+        }
+      },
       "require_icon": null
     },
     {
@@ -348,6 +387,16 @@
       "cost": {
         "money": 0,
         "resources": ["BRICK", "BRICK", "PAPYRUS"]
+      },
+      "gain": {
+        "grey": {
+          "coins": {
+            "own": 2
+          },
+          "victory": {
+            "own": 2
+          }
+        }
       },
       "require_icon": null
     },
@@ -358,6 +407,16 @@
         "money": 0,
         "resources": ["STONE", "ORE"]
       },
+      "gain": {
+        "red": {
+          "coins": {
+            "own": 3
+          },
+          "victory": {
+            "own": 1
+          }
+        }
+      },
       "require_icon": null
     },
     {
@@ -366,6 +425,16 @@
       "cost": {
         "money": 0,
         "resources": ["BRICK", "BRICK", "ORE"]
+      },
+      "gain": {
+        "wonder": {
+          "coins": {
+            "own": 3
+          },
+          "victory": {
+            "own": 1
+          }
+        }
       },
       "require_icon": "Dispensary"
     },

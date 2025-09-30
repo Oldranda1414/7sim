@@ -1,3 +1,4 @@
+from engine.gain import Gain
 from engine.production import Production
 from engine.science import Science
 from engine.cost import Cost
@@ -35,8 +36,9 @@ class ScientificBuilding(Card):
         self.science = science
 
 class CommercialBuilding(Card):
-    def __init__(self, name: str, cost: Cost, require_icon: str | None):
+    def __init__(self, name: str, cost: Cost, require_icon: str | None, gains: list[Gain] = []):
         super().__init__(name, cost, require_icon)
+        self.gains = gains
 
 class Guild(Card):
     def __init__(self, name: str, cost: Cost, require_icon: str | None):
