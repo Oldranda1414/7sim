@@ -27,3 +27,31 @@ def card_type(card: Card) -> "Type":
     if isinstance(card, Guild):
         return Type.GUILD
     raise ValueError("unrecognized card type")
+
+def from_color(color: str) -> Type:
+    if color == "brown":
+        return Type.RAW_MATERIAL
+    elif color == "grey":
+        return Type.MANUFACTURED_GOOD
+    elif color == "red":
+        return Type.MILITARY_STRUCTURE
+    elif color == "blue":
+        return Type.CIVIC_STRUCTURE
+    elif color == "green":
+        return Type.SCIENTIFIC_STRUCTURE
+    elif color == "yellow":
+        return Type.COMMERCIAL_STRUCTURE
+    elif color == "purple":
+        return Type.GUILD
+    raise ValueError("invalid value for argument 'color'")
+
+def card_colors() -> list[str]:
+    return [
+            "brown",
+            "grey",
+            "red",
+            "blue",
+            "green",
+            "yellow",
+            "purple"
+            ]

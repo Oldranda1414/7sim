@@ -318,6 +318,10 @@ This was explored in `card_value.py`
 
 ### Blue cards
 
+These are the easiest since they always give a fixed amount of victory points.
+
+For free cards we can add 1 to the provided points.
+
 - Altar: 4
 - Theater: 4
 - Well: 4
@@ -343,3 +347,32 @@ The best cards:
     - Acqueduct
 - era 3:
     - Gardens, (Senate close second)
+
+### Yellow cards
+
+Since we know the average number of cards per type in a match we can aproximate the points provided by yellow cards using those values:
+Since 3 coins provide 1 Victory point at game end, we can use add them to the total victory points generated.
+
+$$
+PureVP = TypeAverage+CitiesConsidered+VictoryPoints
+CoinVP = (TypeAverage+CitiesConsidered+Coins) / 3
+$$
+
+Arena can be manually calculated by considering that by the third era all wonder stages will have been built
+
+$$
+PureVP = VictoryPoints * 3
+CoinVP = (Coins * 3) / 3
+$$
+
+- Arena: 6.0
+- Tavern: 2.666666666666667
+- Vineyard: 2.1933333333333334
+- Bazaar: 2.2
+- Lighthouse: 0.29416666666666663
+- Haven: 0.23866666666666667
+- Chamber of Commerce: 0.24
+- Ludus: 1.655
+
+average card value: 1.935979166666667
+average card value removing Arena: 1.355404761904762

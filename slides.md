@@ -1,17 +1,10 @@
 ---
 marp: true
 theme: gaia
-paginate: true
+paginate: false
 ---
 
-<style>
-section::after {
-  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
-}
-</style>
-
 <!-- _class: lead invert -->
-<!-- _paginate: false -->
 
 # Come cazzo si vince a Seven Wonders?
 ### (...senza usare internet)
@@ -43,7 +36,7 @@ Cercare su internet sarebbe barare
 
 ---
 
-<!-- _class: lead -->
+<!-- _class: lead invert -->
 
 # Recap Regole Seven Wonders
 
@@ -64,14 +57,12 @@ Cercare su internet sarebbe barare
 
 ---
 
-<!-- _class: lead -->
-<!-- _paginate: false -->
+<!-- _class: lead invert -->
 
 # Disponibilità delle risorse
 
 ---
 
-<!-- _paginate: hold -->
 
 ### Disponibilità delle risorse
 
@@ -145,8 +136,7 @@ Questo risulato ci sarà utile in seguito :)
 
 ---
 
-<!-- _class: lead -->
-<!-- _paginate: false -->
+<!-- _class: lead invert -->
 
 # Distribuzione delle risorse
 
@@ -192,8 +182,7 @@ Anche
 
 ---
 
-<!-- _class: lead -->
-<!-- _paginate: false -->
+<!-- _class: lead invert -->
 
 # Distribuzione delle carte
 
@@ -229,8 +218,7 @@ La città/giocatore media avrà:
 
 ---
 
-<!-- _class: lead -->
-<!-- _paginate: false -->
+<!-- _class: lead invert -->
 
 # Costo delle Carte
 
@@ -255,7 +243,6 @@ Le carte possono costare:
 
 ### Costo delle Carte
 
-<!-- _paginate: hold -->
 
 Le carte possono costare:
 
@@ -303,18 +290,26 @@ $$
 VP = Punti Guadagnati / Costo RP
 $$
 
+
+---
+
+<!-- _class: lead invert -->
+
+# Carte blu
+
+---
+
+### Carte blu
+
+$$
+VP = Punti Guadagnati / Costo RP
+$$
+
 Se costo in RP = 0
 
 $$
 VP = Punti Guadagnati + 1
 $$
-
----
-
-<!-- _class: lead -->
-<!-- _paginate: false -->
-
-# Carte blu
 
 ---
 
@@ -332,8 +327,53 @@ Valore Medio (senza prima era): 1.11
 
 ---
 
-<!-- _class: lead -->
-<!-- _paginate: false -->
+<!-- _class: lead invert -->
+
+# Carte gialle
+
+---
+
+### Carte gialle
+
+$$
+VP = VPPuri+VPMonete
+$$
+
+Con:
+
+$$
+VPPuri = MediaTipo+CittàConsiderate+PuntiGuadagnati
+$$
+$$
+VPMonete = (MediaTipo+CittàConsiderate+MoneteGuadagnate) / 3
+$$
+
+Arena può essere calcolato considerando che in genere si costriuiscono tutti gli stadi
+
+$$
+VPPuri = PuntiGuadagnati * 3
+$$
+$$
+VPMonete = (MoneteGuadagnate * 3) / 3
+$$
+
+---
+
+### Carte gialle
+
+- prima era:
+    - Taverna: 2.7 (duh)
+- seconda era:
+    - Bazar, Vinyard: 2.2
+- terza era:
+    - Arena: 6, (Ludus: 1.6)
+
+Valore medio: 1.94
+Valore medio (senza Arena): 1.35
+
+---
+
+<!-- _class: lead invert -->
 
 # Meraviglie
 
@@ -345,8 +385,7 @@ Valore Medio (senza prima era): 1.11
 
 ---
 
-<!-- _class: lead -->
-<!-- _paginate: false -->
+<!-- _class: lead invert -->
 
 # The end
 
