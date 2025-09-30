@@ -374,6 +374,49 @@ Valore medio (senza Arena): 1.35
 
 <!-- _class: lead invert -->
 
+# Carte rosse
+
+---
+
+
+### Carte rosse
+
+Per ogni era:
+
+$$
+VP = (PuntiPerFM * FM) / CostoInRP
+$$
+
+Con:
+
+$$
+PuntiPerFM = (PuntiVM/MediaFMEra) + 1
+$$
+
+$$
+PuntiVM = 2,6,10
+$$
+
+---
+
+### Carte rosse
+
+Punti medi Forza Militare per giocatore:
+
+- prima era: 1
+- seconda era: 2 (+ 1 = 3)
+- terza era: 4 (+ 3 = 7)
+
+Carte Migliori:
+
+- prima era: Tutte! (1.0)
+- seconda era: Tutte! (1.3)
+- terza era: Siege Workshop, Fortifications, Circus (1.5)
+
+---
+
+<!-- _class: lead invert -->
+
 # Meraviglie
 
 ---
