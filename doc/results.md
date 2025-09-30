@@ -365,7 +365,7 @@ PureVP = VictoryPoints * 3
 CoinVP = (Coins * 3) / 3
 $$
 
-- Arena: 6.0
+- Arena: 2.0
 - Tavern: 2.666666666666667
 - Vineyard: 2.1933333333333334
 - Bazaar: 2.2
@@ -374,8 +374,7 @@ $$
 - Chamber of Commerce: 0.24
 - Ludus: 1.655
 
-average card value: 1.935979166666667
-average card value removing Arena: 1.355404761904762
+average card value: 1.4359791666666668
 
 ### Red Cards
 

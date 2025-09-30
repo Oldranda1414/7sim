@@ -1,8 +1,8 @@
 from engine.card import MilitaryBuilding
-from load.cards import load_all_cards, load_cards
+from load.cards import load_cards
 from stats.util import get_rp
 
-def print_values():
+def print_and_get_value() -> dict[str, float]:
     player_averages = calculate_player_averages()
     era_averages: list[float] = []
     for i in range(len(player_averages[0])):
@@ -33,11 +33,13 @@ def print_values():
             # print(f"({military_VP[era]}/({era_averages[era]} + 1)) * {card.military_strenght} / {get_rp(card.cost)}")
             military_cards_values[era][card.name] =  (military_VP[era]/(era_averages[era] + 1)) * card.military_strenght / get_rp(card.cost)
 
+    red_card_value: dict[str, float] = {}
     for era, era_values in enumerate(military_cards_values):
         print(f"    For {era + 1} era:")
         for name, card_value in era_values.items():
+            red_card_value[name] = card_value
             print(f"        {name}: {card_value}")
-
+    return red_card_value
 
 def calculate_player_averages() -> list[list[float]]:
     player_averages: list[list[float]] = []

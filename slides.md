@@ -287,7 +287,7 @@ Ora possiamo determinare per ogni carta il suo rapporto punti/costo!
 Usando Value Points:
 
 $$
-VP = Punti Guadagnati / Costo RP
+VP = Punti Guadagnati / Costo In RP
 $$
 
 Se costo in RP = 0
@@ -307,7 +307,7 @@ $$
 ### Carte blu
 
 $$
-VP = NumeroSullaCarta / Costo RP
+VP = NumeroSullaCarta / Costo In RP
 $$
 
 ---
@@ -335,7 +335,7 @@ Valore Medio (senza prima era): 1.11
 ### Carte gialle
 
 $$
-VP = VPPuri+VPMonete
+VP = VPPuri+VPMonete / CostoInRP
 $$
 
 Con:
@@ -365,7 +365,7 @@ $$
 - seconda era:
     - Bazar, Vinyard: 2.2
 - terza era:
-    - Arena: 6, (Ludus: 1.6)
+    - Arena: 2.0
 
 Valore medio: 1.94
 Valore medio (senza Arena): 1.35
