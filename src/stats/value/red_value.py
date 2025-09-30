@@ -2,7 +2,7 @@ from engine.card import MilitaryBuilding
 from load.cards import load_cards
 from stats.util import get_rp
 
-def print_and_get_value() -> dict[str, float]:
+def print_and_get_value(quiet: bool = False) -> dict[str, float]:
     player_averages = calculate_player_averages()
     era_averages: list[float] = []
     for i in range(len(player_averages[0])):
@@ -11,17 +11,17 @@ def print_and_get_value() -> dict[str, float]:
             military_sum += eras[i]
         era_averages.append(military_sum/5)
 
-    print(f"    Military Points per era per player")
+    conditioned_print(quiet, f"    Military Points per era per player")
     for index, era_average in enumerate(player_averages):
-        print(f"        For {index + 3} players")
+        conditioned_print(quiet, f"        For {index + 3} players")
         for index, value in enumerate(era_average):
-            print(f"            For {index} era: {value}")
-    println()
+            conditioned_print(quiet, f"            For {index} era: {value}")
+    conditioned_println(quiet)
 
-    print(f"    Average Military Points per era per player")
+    conditioned_print(quiet, f"    Average Military Points per era per player")
     for index, era in enumerate(era_averages):
-        print(f"        For {index + 1} era: {round(era)} (from: {era})")
-    println()
+        conditioned_print(quiet, f"        For {index + 1} era: {round(era)} (from: {era})")
+    conditioned_println(quiet)
 
     military_cards_values: list[dict[str, float]] = []
     military_VP: tuple[int, int, int] = (2,6,10)
@@ -29,16 +29,16 @@ def print_and_get_value() -> dict[str, float]:
         military_cards_values.append({})
         for card in [card for card in load_cards(7, era + 1) if isinstance(card, MilitaryBuilding)]:
             # Sanity check print
-            # print(card.name)
-            # print(f"({military_VP[era]}/({era_averages[era]} + 1)) * {card.military_strenght} / {get_rp(card.cost)}")
+            # conditioned_print(quiet, card.name)
+            # conditioned_print(quiet, f"({military_VP[era]}/({era_averages[era]} + 1)) * {card.military_strenght} / {get_rp(card.cost)}")
             military_cards_values[era][card.name] =  (military_VP[era]/(era_averages[era] + 1)) * card.military_strenght / get_rp(card.cost)
 
     red_card_value: dict[str, float] = {}
     for era, era_values in enumerate(military_cards_values):
-        print(f"    For {era + 1} era:")
+        conditioned_print(quiet, f"    For {era + 1} era:")
         for name, card_value in era_values.items():
             red_card_value[name] = card_value
-            print(f"        {name}: {card_value}")
+            conditioned_print(quiet, f"        {name}: {card_value}")
     return red_card_value
 
 def calculate_player_averages() -> list[list[float]]:
@@ -58,5 +58,10 @@ def sum_military_power(cards: list[MilitaryBuilding]) -> int:
         result += card.military_strenght
     return result
 
-def println():
-    print("")
+def conditioned_print(quiet: bool, args):
+    if not quiet:
+        print(args)
+def conditioned_println(quiet: bool):
+    if not quiet:
+        print("")
+
