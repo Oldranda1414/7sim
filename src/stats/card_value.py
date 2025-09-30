@@ -2,6 +2,7 @@ from engine.card import CivilBuilding, CommercialBuilding
 from load.cards import load_all_cards, load_guild_cards
 from stats.value.blue_value import get_value as get_civil_value
 from stats.value.yellow_value import get_value as get_commercial_value
+from stats.value.red_value import print_values as print_red_values
 
 manual_yellow: dict[str, float] = {
         "Arena": 6.0
@@ -36,6 +37,7 @@ def main():
         blue_card_value.pop(card_name)
     print(f"    average card value removing first era cards: {average(list(blue_card_value.values()))}")
     println()
+
     print("yellow card values:")
     for name, value in yellow_card_value.items():
         print(f"    {name}: {value}")
@@ -43,6 +45,11 @@ def main():
     print(f"    average card value: {average(list(yellow_card_value.values()))}")
     yellow_card_value.pop("Arena")
     print(f"    average card value removing Arena: {average(list(yellow_card_value.values()))}")
+    println()
+
+    print("red card values, it's complicated:")
+    print_red_values()
+    println()
 
 def println():
     print("")

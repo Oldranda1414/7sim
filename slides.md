@@ -290,6 +290,11 @@ $$
 VP = Punti Guadagnati / Costo RP
 $$
 
+Se costo in RP = 0
+
+$$
+VP = Punti Guadagnati + 1
+$$
 
 ---
 
@@ -302,13 +307,7 @@ $$
 ### Carte blu
 
 $$
-VP = Punti Guadagnati / Costo RP
-$$
-
-Se costo in RP = 0
-
-$$
-VP = Punti Guadagnati + 1
+VP = NumeroSullaCarta / Costo RP
 $$
 
 ---

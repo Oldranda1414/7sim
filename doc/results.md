@@ -314,13 +314,13 @@ These results prove that the game is pretty well built as most value distributio
 
 All the statistics gathered till now will enable us to evaluate the Point production per Resource Point for every card type
 
+For free cards we can add 1 to the calculated gained victory points.
+
 This was explored in `card_value.py`
 
 ### Blue cards
 
 These are the easiest since they always give a fixed amount of victory points.
-
-For free cards we can add 1 to the provided points.
 
 - Altar: 4
 - Theater: 4
