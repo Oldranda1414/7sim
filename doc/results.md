@@ -376,3 +376,67 @@ $$
 
 average card value: 1.935979166666667
 average card value removing Arena: 1.355404761904762
+
+### Red Cards
+
+Red cards VPs depend on the era they belong to, as a battle win in the first era is worth much less as a battle win in the third era.
+
+For every era
+
+$$
+VP = (PuntiPerFM * FM) / CostoInRP
+$$
+
+Con:
+
+$$
+PuntiPerFM = (PuntiVM/MediaFMEra) + 1
+$$
+
+Military Points per era per player:
+
+- For 3 players
+    - For 0 era: 1.0
+    - For 1 era: 2.0
+    - For 2 era: 3.0
+- For 4 players
+    - For 0 era: 1.0
+    - For 1 era: 2.0
+    - For 2 era: 3.75
+- For 5 players
+    - For 0 era: 1.0
+    - For 1 era: 2.0
+    - For 2 era: 4.2
+- For 6 players
+    - For 0 era: 0.8333333333333334
+    - For 1 era: 2.3333333333333335
+    - For 2 era: 4.0
+- For 7 players
+    - For 0 era: 0.8571428571428571
+    - For 1 era: 2.5714285714285716
+    - For 2 era: 4.285714285714286
+
+Average Military Points per era per player:
+
+- For 1 era: 1 (from: 0.9380952380952381)
+- For 2 era: 2 (from: 2.180952380952381)
+- For 3 era: 4 (from: 3.847142857142857)
+
+Value Points per card:
+
+- For 1 era:
+    - Guard Tower: 1.031941031941032
+    - Baracks: 1.031941031941032
+    - Stockade: 1.031941031941032
+- For 2 era:
+    - Stables: 1.2574850299401197
+    - Archery Range: 1.2574850299401197
+    - Walls: 1.2574850299401197
+    - Training Ground: 1.2574850299401197
+- For 3 era:
+    - Arsenal: 1.031535514294135
+    - Siege Workshop: 1.5473032714412023
+    - Fortifications: 1.5473032714412023
+    - Circus: 1.5473032714412023
+    - Castrum: 1.031535514294135
+
