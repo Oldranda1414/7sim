@@ -4,6 +4,9 @@ theme: gaia
 paginate: false
 ---
 
+TODO tradurre grafici
+TODO tradurre nomi carte in inglese
+
 <!-- _class: lead invert -->
 
 # Come cazzo si vince a Seven Wonders?
@@ -26,7 +29,7 @@ Cercare su internet sarebbe barare
 2 Opzioni:
 
 - Usare carta e penna (circa 1 ora)
-- Farlo fare al computer (circa 8 ore)
+- Farlo fare al computer (circa troppe ore)
 
 ---
 
@@ -287,7 +290,7 @@ Ora possiamo determinare per ogni carta il suo rapporto punti/costo!
 Usando Value Points:
 
 $$
-VP = Punti Guadagnati / Costo RP
+VP = Punti Guadagnati / Costo In RP
 $$
 
 Se costo in RP = 0
@@ -307,7 +310,7 @@ $$
 ### Carte blu
 
 $$
-VP = NumeroSullaCarta / Costo RP
+VP = NumeroSullaCarta / Costo In RP
 $$
 
 ---
@@ -335,16 +338,16 @@ Valore Medio (senza prima era): 1.11
 ### Carte gialle
 
 $$
-VP = VPPuri+VPMonete
+VP = VPPuri+VPMonete / CostoInRP
 $$
 
 Con:
 
 $$
-VPPuri = MediaTipo+CittàConsiderate+PuntiGuadagnati
+VPPuri = MediaTipo*CittàConsiderate*PuntiGuadagnati
 $$
 $$
-VPMonete = (MediaTipo+CittàConsiderate+MoneteGuadagnate) / 3
+VPMonete = (MediaTipo*CittàConsiderate*MoneteGuadagnate) / 3
 $$
 
 Arena può essere calcolato considerando che in genere si costriuiscono tutti gli stadi
@@ -365,10 +368,45 @@ $$
 - seconda era:
     - Bazar, Vinyard: 2.2
 - terza era:
-    - Arena: 6, (Ludus: 1.6)
+    - Arena: 2.0
 
-Valore medio: 1.94
-Valore medio (senza Arena): 1.35
+Valore medio: 1.44
+
+---
+
+<!-- _class: lead invert -->
+
+# Carte viola
+
+---
+
+### Carte viola
+
+Ragionamento analogo per carte viola...
+
+$$
+VP = VPPuri / CostoInRP
+$$
+
+Con:
+
+$$
+VPPuri = MediaTipo*CittàConsiderate*PuntiGuadagnati
+$$
+
+Per carte che contano meraviglie consideriamo 3 stadi completi
+
+---
+
+### Carte viola
+
+Top 3:
+
+- Craftsmens Guild: 2.4 (!)
+- Workers Guild: 1.4
+- Spies Guild: 1.3
+
+Valore medio: 1.20
 
 ---
 

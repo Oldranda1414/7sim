@@ -365,7 +365,7 @@ PureVP = VictoryPoints * 3
 CoinVP = (Coins * 3) / 3
 $$
 
-- Arena: 6.0
+- Arena: 2.0
 - Tavern: 2.666666666666667
 - Vineyard: 2.1933333333333334
 - Bazaar: 2.2
@@ -374,8 +374,7 @@ $$
 - Chamber of Commerce: 0.24
 - Ludus: 1.655
 
-average card value: 1.935979166666667
-average card value removing Arena: 1.355404761904762
+average card value: 1.4359791666666668
 
 ### Red Cards
 
@@ -440,3 +439,36 @@ Value Points per card:
     - Circus: 1.5473032714412023
     - Castrum: 1.031535514294135
 
+- Guard Tower: 1.031941031941032
+- Baracks: 1.031941031941032
+- Stockade: 1.031941031941032
+- Stables: 1.2574850299401197
+- Archery Range: 1.2574850299401197
+- Walls: 1.2574850299401197
+- Training Ground: 1.2574850299401197
+- Arsenal: 1.031535514294135
+- Siege Workshop: 1.5473032714412023
+- Fortifications: 1.5473032714412023
+- Circus: 1.5473032714412023
+- Castrum: 1.031535514294135
+
+average card value: 1.235895338207954
+
+### Purple Cards
+
+Here we use a similar method as with commercial cards:
+
+- Workers Guild: 1.432
+- Craftsmens Guild: 2.4
+- Magistrates Guild: 1.0342857142857143
+- Traders Guild: 0.7844444444444444
+- Spies Guild: 1.324
+- Philosophers Guild: 0.8133333333333334
+- Shipowners Guild: 0.7577777777777778
+
+These two can be manually calculated by considering that by the third era all wonder stages will have been built
+
+- Decorators Guild: 1.1666666666666667
+- Builders Guild: 1.125
+
+average card value: 1.2041675485008816

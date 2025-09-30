@@ -41,5 +41,6 @@ class CommercialBuilding(Card):
         self.gains = gains
 
 class Guild(Card):
-    def __init__(self, name: str, cost: Cost, require_icon: str | None):
+    def __init__(self, name: str, cost: Cost, require_icon: str | None, gains: list[Gain] = []):
         super().__init__(name, cost, require_icon)
+        self.gains = gains
