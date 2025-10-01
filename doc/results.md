@@ -475,6 +475,33 @@ average card value: 1.2041675485008816
 
 ### Green cards
 
+#### Science Building Availability
+
 Not all tecnologies are made the same:
 
+Tech building balance per number of players is shown in the following graph:
 
+![tech balance](./../src/stats/assets/tech_balance/tech_balance.png)
+
+- 3 players:
+  - Writing: 4
+  - Engineering: 4
+  - Mathematics: 4
+- 4 players:
+  - Writing: 6
+  - Engineering: 4
+  - Mathematics: 5
+- 5 players:
+  - Writing: 7
+  - Engineering: 6
+  - Mathematics: 6
+- 6 players:
+  - Writing: 7
+  - Engineering: 6
+  - Mathematics: 7
+- 7 players:
+  - Writing: 8
+  - Engineering: 8
+  - Mathematics: 8
+
+This shows that when possible the writing buildings are usually more present.
