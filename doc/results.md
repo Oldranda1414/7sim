@@ -472,3 +472,9 @@ These two can be manually calculated by considering that by the third era all wo
 - Builders Guild: 1.125
 
 average card value: 1.2041675485008816
+
+### Green cards
+
+Not all tecnologies are made the same:
+
+
