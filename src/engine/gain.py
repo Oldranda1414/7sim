@@ -4,10 +4,9 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from engine.card_type import Type
 
-class Coin(int):
-    pass
-class VictoryPoint(int):
-    pass
+class PrizeType(Enum):
+    COIN = "coin"
+    VICTORY = "victory"
 
 class Condition(Enum):
     OWN = "own"
@@ -19,7 +18,8 @@ class Multiplier():
         self.card_type = card_type
 
 class Gain():
-    def __init__(self, prize: Coin | VictoryPoint, multiplier: Multiplier | None = None):
+    def __init__(self, prize: int, prize_type: PrizeType, multiplier: Multiplier | None = None):
         self.prize = prize 
+        self.prize_type = prize_type 
         self.multiplier = multiplier
 

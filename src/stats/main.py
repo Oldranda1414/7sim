@@ -16,7 +16,7 @@ def print_values():
     card_value()
 
 def main():
-    # generate_graphs()
+    generate_graphs()
     print_values()
 
 if __name__ == "__main__":

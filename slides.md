@@ -4,9 +4,6 @@ theme: gaia
 paginate: false
 ---
 
-TODO tradurre grafici
-TODO tradurre nomi carte in inglese
-
 <!-- _class: lead invert -->
 
 # Come cazzo si vince a Seven Wonders?
@@ -179,7 +176,7 @@ E le rare?
 
 ### Distribuzione delle risorse
 
-In parite da 4 giocatori argilla e pietra hanno più valore.
+In parite da 4 giocatori argilla e pietra hanno più valore
 
 Nelle altre parite tutte le risorse sono uguali
 
@@ -225,7 +222,7 @@ Com'è fatta la città media?
 
 ### Distribuzione delle carte
 
-La città/giocatore media avrà:
+La città/giocatore media/o avrà:
 
 - 1/2 carte gilda
 - 1/2 carte manufatti
@@ -382,11 +379,11 @@ $$
 - prima era:
     - Taverna: 2.7 (duh)
 - seconda era:
-    - Bazar, Vinyard: 2.2
+    - Bazar, Vigneto: 4.6
 - terza era:
-    - Arena: 2.0
+    - Palestra Gladiatoria: 3.3
 
-Valore medio: 1.44
+Valore medio: 2.53
 
 ---
 
@@ -418,9 +415,9 @@ Per carte che contano meraviglie consideriamo 3 stadi completi
 
 Top 3:
 
-- Craftsmens Guild: 2.4 (!)
-- Workers Guild: 1.4
-- Spies Guild: 1.3
+- Gilda degli Artigiani: 2.4 (!)
+- Gilda dei Lavoratori: 1.4
+- Gilda delle spie: 1.3
 
 Valore medio: 1.20
 
@@ -465,7 +462,9 @@ Carte Migliori:
 
 - prima era: Tutte! (1.0)
 - seconda era: Tutte! (1.3)
-- terza era: Siege Workshop, Fortifications, Circus (1.5)
+- terza era: Opificio D'Assedio, Fortificazioni, Circo (1.5)
+
+**Hanno valori simili!**
 
 ---
 
@@ -497,6 +496,86 @@ Non tutte le scienze sono uguali!
 
 <!-- _class: lead invert -->
 
-# The end
+# Conclusioni
 
-### (For now...)
+---
+
+### Conclusioni
+
+- Risorse:
+    - 3/4 risorse base (senza contare città)
+    - 1/2 risorse rare (senza contare città)
+- Forza militare:
+    - Prima era= 1/2
+    - Seconda era= 3/4
+    - Terza era= 7/8
+- 3/4 per ogni tipologia (1/2 di gilde)
+- solo un tipo di scienza
+
+---
+
+### Conclusioni
+
+Media VP:
+
+- Commerciali (Gialle): 2.53
+- Civili (Blu): 1.92
+- Militari (Rosse): 1.24
+- Gilde (Viola): 1.20
+- Scintifiche (Verdi): 0.74
+
+---
+
+### Conclusioni
+
+Carte Migliori:
+
+- Prima era:
+    - Altare, Teatro, Pozzo: 4.0
+    - Bagni: 3.0
+    - Taverna: 2.7
+- Seconda era:
+    - Bazar, Vigneto: 4.6
+    - Acquedotto: 1.7
+    - Statua: 1.3
+
+---
+
+### Conclusioni
+
+Carte Migliori:
+
+- Terza era:
+    - Palestra Gladiatoria: 3.3
+    - Arena: 2.0
+    - Giardini: 1.7
+
+---
+
+### Conclusioni
+
+Non considerato:
+
+- mercati
+- città (meraviglia, risorsa)
+- occhi
+
+---
+
+<!-- _class: lead invert -->
+
+# Fine...
+
+---
+
+<!-- _class: lead invert -->
+
+# Fine?
+
+---
+
+<!-- _class: lead invert -->
+
+# Fine
+
+### (Per adesso...)
