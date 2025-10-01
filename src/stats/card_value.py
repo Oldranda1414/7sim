@@ -1,16 +1,17 @@
 from engine.card import CivilBuilding, CommercialBuilding, Guild
-from load.cards import load_all_cards, load_guild_cards
+from load.cards import load_all_cards, load_guild_cards, load_cards
 from stats.util import get_rp
-from stats.value.blue_value import get_value as get_civil_value
-from stats.value.yellow_value import get_value as get_commercial_value
-from stats.value.red_value import print_and_get_value as print_and_get_red_value
+from stats.value.blue_value import get_value as get_blue_value
+from stats.value.yellow_value import get_value as get_yellow_value
 from stats.value.purple_value import get_value as get_purple_value
+from stats.value.red_value import print_and_get_value as print_and_get_red_value
+from stats.value.green_value import print_and_get_value as print_and_get_green_value
 
 
 def average(values: list[float]):
     return sum(values)/len(values)
 
-def main():
+def main() -> None:
     base_cards = load_all_cards(7)
     guild_cards = load_guild_cards()
 
@@ -29,37 +30,55 @@ def main():
     blue_card_value: dict[str, float] = {}
     yellow_card_value: dict[str, float] = manual_yellow.copy()
     purple_card_value: dict[str, float] = manual_purple.copy()
-    base_card_value: dict[str, float] = {**blue_card_value, **yellow_card_value, **purple_card_value}
+    all_card_value: dict[str, float] = {**blue_card_value, **yellow_card_value, **purple_card_value}
 
     for card in base_cards:
         if isinstance(card, CivilBuilding):
-            base_card_value[card.name] = get_civil_value(card)
-            blue_card_value[card.name] = base_card_value[card.name]
+            all_card_value[card.name] = get_blue_value(card)
+            blue_card_value[card.name] = all_card_value[card.name]
         elif isinstance(card, CommercialBuilding):
             if len(card.gains) != 0:
-                base_card_value[card.name] = get_commercial_value(card)
-                yellow_card_value[card.name] = base_card_value[card.name]
+                all_card_value[card.name] = get_yellow_value(card)
+                yellow_card_value[card.name] = all_card_value[card.name]
 
     # calculated seperately
     red_card_value = print_and_get_red_value(quiet=True)
+    green_card_value = print_and_get_green_value(quiet=True)
     # adding to final dict
-    base_card_value = {**base_card_value, **red_card_value}
+    all_card_value = {**all_card_value, **red_card_value, **green_card_value}
 
     for guild_card in guild_cards:
         if isinstance(guild_card, Guild):
             if len(guild_card.gains) != 0:
-                base_card_value[guild_card.name] = get_purple_value(guild_card)
-                purple_card_value[guild_card.name] = base_card_value[guild_card.name]
+                all_card_value[guild_card.name] = get_purple_value(guild_card)
+                purple_card_value[guild_card.name] = all_card_value[guild_card.name]
 
-    all_values = [blue_card_value, yellow_card_value, red_card_value, purple_card_value]
-    colors = ["Blue", "Yellow", "Red", "Purple"]
+    all_values = [blue_card_value, yellow_card_value, red_card_value, purple_card_value, green_card_value]
+    colors = ["Blue", "Yellow", "Red", "Purple", "Green"]
+    average_card_values: dict[str, float] = {color: 0.0 for color in colors}
     for color, values in zip(colors, all_values):
         println()
         print(f"{color} card values:")
         for name, value in values.items():
             print(f"    {name}: {value}")
         println()
+        average_card_values[color] = average(list(values.values()))
         print(f"    average card value: {average(list(values.values()))}")
+
+    println()
+    print(f"Final Averages:")
+    for color, value in average_card_values.items():
+        print(f"{color}: {value}")
+    println()
+
+    print("Best cards per era:")
+    for era in range(1,4):
+        print(f"    For {era} era")
+        era_cards_names: set[str] = set([card.name for card in load_cards(7,era)])
+        era_cards_values: dict[str, float] = {name: value for name, value in all_card_value.items() if name in era_cards_names}
+        sorted_values = sorted(era_cards_values.items(), key=lambda x: x[1], reverse=True)
+        for name, value in sorted_values:
+            print(f"        {name}: {value}")
 
 def println():
     print("")

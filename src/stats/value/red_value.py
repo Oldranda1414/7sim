@@ -1,12 +1,13 @@
 from engine.card import MilitaryBuilding
 from load.cards import load_cards
 from stats.util import get_rp
+from stats.value.util import conditioned_print, conditioned_println
 
 def print_and_get_value(quiet: bool = False) -> dict[str, float]:
     player_averages = calculate_player_averages()
     era_averages: list[float] = []
     for i in range(len(player_averages[0])):
-        military_sum = 0
+        military_sum = 0.0
         for eras in player_averages:
             military_sum += eras[i]
         era_averages.append(military_sum/5)
@@ -57,11 +58,3 @@ def sum_military_power(cards: list[MilitaryBuilding]) -> int:
     for card in cards:
         result += card.military_strenght
     return result
-
-def conditioned_print(quiet: bool, args):
-    if not quiet:
-        print(args)
-def conditioned_println(quiet: bool):
-    if not quiet:
-        print("")
-

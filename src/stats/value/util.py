@@ -1,5 +1,5 @@
 from engine.card_type import Type
-from engine.gain import Coin, Condition
+from engine.gain import PrizeType, Condition
 from engine.card import CommercialBuilding, Guild
 
 average_cards = {
@@ -24,7 +24,14 @@ def calculate_gain_VP(card: Guild | CommercialBuilding) -> float:
             prize *= average_cards[mult.card_type]
             if mult.condition == Condition.NEIGHBOR:
                 prize *= 2
-        if isinstance(gain.prize, Coin):
+        if gain.prize_type == PrizeType.COIN:
             prize /= 3
         count += prize
     return count
+
+def conditioned_print(quiet: bool, args):
+    if not quiet:
+        print(args)
+def conditioned_println(quiet: bool):
+    if not quiet:
+        print("")
