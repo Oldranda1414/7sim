@@ -25,7 +25,7 @@ jobs:
         run: npm install -g @marp-team/marp-cli
 
       - name: Build the HTML slides
-        run: marp slides.md --output index.html -w --allow-local-files
+        run: marp slides.md --output index.html --allow-local-files
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -54,8 +54,8 @@ jobs:
 
       - name: Build PDF and PPTX
         run: |
-          marp slides.md --pdf --output slides.pdf -w --allow-local-files
-          marp slides.md --pptx --output slides.pptx -w --allow-local-files
+          marp slides.md --pdf --output slides.pdf --allow-local-files
+          marp slides.md --pptx --output slides.pptx --allow-local-files
 
       - name: Create or update "latest" tag
         run: |
