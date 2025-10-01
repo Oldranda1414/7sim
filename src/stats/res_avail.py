@@ -127,13 +127,11 @@ def create_individual_trend_plots(data):
                      markersize=8, label='Rare Resources/Player', color='red')
     
     # Create secondary y-axis for ratio
-    ax2 = ax.twinx()
-    line3, = ax2.plot(player_counts, data['base_per_rare_ratios'], '^-', linewidth=2, 
+    line3, = ax.plot(player_counts, data['base_per_rare_ratios'], '^-', linewidth=2, 
                       markersize=8, label='Base:Rare Ratio', color='green')
     
     ax.set_xlabel('Number of Players')
     ax.set_ylabel('Resources per Player')
-    ax2.set_ylabel('Base:Rare Ratio')
     ax.set_title('Resource Availability Trends by Player Count', fontsize=14, fontweight='bold')
     
     # Combine legends from both axes

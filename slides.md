@@ -61,7 +61,7 @@ Come procediamo?
 
 - Raccogliamo strumentopoli!
 - Formule matematiche!!!
-- Conclusioni
+- Conclusioni!!!!!!
 
 ---
 
@@ -272,7 +272,7 @@ Usiamo Resource Point
 
 - Risorse base = 1 RP
 - Risorse rare = 3 RP
-- Monete = 1 RP
+- Monete = 1 RP (o 2 RP, cambia poco)
 
 ---
 
@@ -290,13 +290,17 @@ Costo medio:
 - Era 2: 2.39 RP
 - Era 3: 6.16 RP
 
-Questo indipendentemente dal numero di giocatori! (bassa varianza)
+Questo indipendentemente dal numero di giocatori!
+
+- più giocatori = costo medio minore
+- delta principalmente terza era
+- bassa varianza
 
 ---
 
 ### Costo delle Carte
 
-Ora possiamo determinare per ogni carta il suo rapporto punti/costo:
+Ora possiamo determinare per ogni carta il suo 'valore':
 
 Usando Value Points:
 
@@ -321,6 +325,8 @@ Ultimo strumentopolo acquisito ☝( ◠‿◠ )
 ---
 
 ### Carte Blu
+
+<br><br>
 
 $$
 VP = NumeroSullaCarta / Costo In RP
@@ -379,7 +385,7 @@ $$
 - prima era:
     - Taverna: 2.7 (duh)
 - seconda era:
-    - Bazar, Vigneto: 4.6
+    - Bazar, Vigneto: 4.6 (circa)
 - terza era:
     - Palestra Gladiatoria: 3.3
 
@@ -417,7 +423,7 @@ Top 3:
 
 - Gilda degli Artigiani: 2.4 (!)
 - Gilda dei Lavoratori: 1.4
-- Gilda delle spie: 1.3
+- Gilda delle Spie: 1.3
 
 Valore medio: 1.20
 
@@ -441,11 +447,11 @@ $$
 Con:
 
 $$
-PuntiPerFM = (PuntiVM/MediaFMEra) + 1
+PuntiPerFM = PuntiVM / (MediaFMEra + 1)
 $$
 
 $$
-PuntiVM = 2,6,10
+PuntiVM = [1,3,5] * 2
 $$
 
 ---
@@ -482,6 +488,41 @@ Non tutte le scienze sono uguali!
 
 ---
 
+### Carte Verdi
+
+<br><br>
+
+- 3 stesso tipo = 9 Punti
+- 3 diverso tipo = 7 Punti
+
+Meglio se stesso tipo!
+
+---
+
+### Carte Verdi
+
+Dato che in media ogni città ha 3/4 carte verdi, per ogni tipo:
+
+<br><br>
+
+$$
+VP = 4 / MediaCostoInRP
+$$
+
+---
+
+### Carte Verdi
+
+- Scrittura: 0.8
+- Matematica: 0.7
+- Ingegneria: 0.7 :(
+
+Valore Medio: 0.74
+
+La scienza non ripaga
+
+---
+
 <!-- _class: lead invert -->
 
 # Meraviglie
@@ -502,15 +543,15 @@ Non tutte le scienze sono uguali!
 
 ### Conclusioni
 
-- Risorse:
-    - 3/4 risorse base (senza contare città)
-    - 1/2 risorse rare (senza contare città)
+- Risorse (senza contare città):
+    - 3/4 risorse base
+    - 1/2 risorse rare
 - Forza militare:
-    - Prima era= 1/2
-    - Seconda era= 3/4
-    - Terza era= 7/8
-- 3/4 per ogni tipologia (1/2 di gilde)
-- solo un tipo di scienza
+    - Prima era: 1/2
+    - Seconda era: 3/4
+    - Terza era: 7/8
+- 3/4 per ogni altra tipologia (1/2 di gilde)
+- solo un tipo di scienza (idealmente Scrittura)
 
 ---
 
@@ -531,13 +572,14 @@ Media VP:
 Carte Migliori:
 
 - Prima era:
-    - Altare, Teatro, Pozzo: 4.0
-    - Bagni: 3.0
-    - Taverna: 2.7
+    - 🟦 Altare, Teatro, (4+) Pozzo: 4.0
+    - 🟦 Bagni: 3.0
+    - (4+) 🟨 Taverna: 2.7
+
 - Seconda era:
-    - Bazar, Vigneto: 4.6
-    - Acquedotto: 1.7
-    - Statua: 1.3
+    - 🟨 Vigneto, (4+) Bazar: 4.6
+    - 🟦 Acquedotto: 1.7
+    - 🟦 Statua: 1.3
 
 ---
 
@@ -546,17 +588,18 @@ Carte Migliori:
 Carte Migliori:
 
 - Terza era:
-    - Palestra Gladiatoria: 3.3
-    - Arena: 2.0
-    - Giardini: 1.7
+    - (4+) 🟨 Palestra Gladiatoria: 3.3
+    - 🟨 Arena: 2.0
+    - 🟦 Giardini: 1.7
 
 ---
 
 ### Conclusioni
 
-Non considerato:
+Come consideriamo...:
 
 - mercati
+- concatenazioni
 - città (meraviglia, risorsa)
 - occhi
 
@@ -579,3 +622,4 @@ Non considerato:
 # Fine
 
 ### (Per adesso...)
+
