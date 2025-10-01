@@ -60,6 +60,18 @@ Cercare su internet sarebbe barare
 
 ---
 
+Come procediamo?
+
+- Raccogliamo strumentopoli!
+- Formule matematiche!!!
+- Conclusioni
+
+---
+
+![h:600px](./assets/strumentopolo.jpg)
+
+---
+
 <!-- _class: lead invert -->
 
 # Disponibilità delle risorse
@@ -135,7 +147,7 @@ $$
 
 Quindi una risorsa rara vale come ~ 3 risorse base
 
-Questo risulato ci sarà utile in seguito :)
+Questo risulato ci sarà utile in seguito (ಠ ‿↼)
 
 ---
 
@@ -219,6 +231,8 @@ La città/giocatore media avrà:
 - 1/2 carte manufatti
 - 3/4 carte per ogni altro tipo
 
+Questo risulato ci sarà utile in seguito (***wink wink***)
+
 ---
 
 <!-- _class: lead invert -->
@@ -261,7 +275,7 @@ Usiamo Resource Point
 
 - Risorse base = 1 RP
 - Risorse rare = 3 RP
-- Monete = RP
+- Monete = 1 RP
 
 ---
 
@@ -279,13 +293,13 @@ Costo medio:
 - Era 2: 2.39 RP
 - Era 3: 6.16 RP
 
-Questo indipendentemente dal numero di giocatori!
+Questo indipendentemente dal numero di giocatori! (bassa varianza)
 
 ---
 
 ### Costo delle Carte
 
-Ora possiamo determinare per ogni carta il suo rapporto punti/costo!
+Ora possiamo determinare per ogni carta il suo rapporto punti/costo:
 
 Usando Value Points:
 
@@ -298,6 +312,8 @@ Se costo in RP = 0
 $$
 VP = Punti Guadagnati + 1
 $$
+
+Ultimo strumentopolo acquisito ☝( ◠‿◠ )
 
 ---
 
