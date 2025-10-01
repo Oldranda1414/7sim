@@ -303,11 +303,11 @@ $$
 
 <!-- _class: lead invert -->
 
-# Carte blu
+# Carte Blu
 
 ---
 
-### Carte blu
+### Carte Blu
 
 $$
 VP = NumeroSullaCarta / Costo In RP
@@ -315,7 +315,7 @@ $$
 
 ---
 
-### Carte blu
+### Carte Blu
 
 - prima era:
     - Altare, Teatro, Pozzo: 4 (duh)
@@ -331,11 +331,11 @@ Valore Medio (senza prima era): 1.11
 
 <!-- _class: lead invert -->
 
-# Carte gialle
+# Carte Gialle
 
 ---
 
-### Carte gialle
+### Carte Gialle
 
 $$
 VP = VPPuri+VPMonete / CostoInRP
@@ -361,7 +361,7 @@ $$
 
 ---
 
-### Carte gialle
+### Carte Gialle
 
 - prima era:
     - Taverna: 2.7 (duh)
@@ -380,7 +380,7 @@ Valore medio: 1.44
 
 ---
 
-### Carte viola
+### Carte Viola
 
 Ragionamento analogo per carte viola...
 
@@ -398,7 +398,7 @@ Per carte che contano meraviglie consideriamo 3 stadi completi
 
 ---
 
-### Carte viola
+### Carte Viola
 
 Top 3:
 
@@ -412,12 +412,12 @@ Valore medio: 1.20
 
 <!-- _class: lead invert -->
 
-# Carte rosse
+# Carte Rosse
 
 ---
 
 
-### Carte rosse
+### Carte Rosse
 
 Per ogni era:
 
@@ -437,7 +437,7 @@ $$
 
 ---
 
-### Carte rosse
+### Carte Rosse
 
 Punti medi Forza Militare per giocatore:
 
@@ -450,6 +450,20 @@ Carte Migliori:
 - prima era: Tutte! (1.0)
 - seconda era: Tutte! (1.3)
 - terza era: Siege Workshop, Fortifications, Circus (1.5)
+
+---
+
+<!-- _class: lead invert -->
+
+# Carte Verdi
+
+---
+
+### Carte Verdi
+
+Non tutte le scienze sono uguali!
+
+![h:450px](./src/stats/assets/tech_balance/tech_balance.png)
 
 ---
 
