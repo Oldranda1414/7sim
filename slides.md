@@ -23,7 +23,7 @@ Cercare su internet sarebbe barare
 
 ## Cosa fare?
 
-2 Opzioni:
+Opzioni:
 
 - Usare carta e penna (circa 1 ora)
 - Farlo fare al computer (circa troppe ore)
@@ -44,7 +44,7 @@ Cercare su internet sarebbe barare
 
 ### Recap Regole Seven Wonders
 
-![h:500px](./assets/tenor.gif)
+![h:500px](./assets/volevi.gif)
 
 ---
 
@@ -490,7 +490,7 @@ Non tutte le scienze sono uguali!
 
 ### Meraviglie
 
-![h:500px](./assets/tenor.gif)
+![h:500px](./assets/gotem.jpg)
 
 ---
 
